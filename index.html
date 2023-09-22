@@ -1,27 +1,75 @@
-<!DOCTYPE html>
+<!DOCTYPE html lang="cs">
 <html>
   <head>
-    <meta charset="UTF-8" />
-    <title>CČSH Spořilov</title>
-    <meta
-      name="description"
-      content="Náboženská obec Církve československé husitské v Praze 4 - Spořilov. Farář Jan Hlavsa"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, viewport-fit=cover"
-    />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <head>
+      <!-- Basic Page Needs
+================================================== -->
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <script src="https://cdn.tailwindcss.com"></script>
+      <!-- Mobile Specific Metas
+================================================== -->
+      <meta name="HandheldFriendly" content="True" />
+      <meta name="MobileOptimized" content="320" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <script type="text/javascript">
+      <!-- Title and meta description
+================================================== -->
+      <title>CČSH Spořilov – Církev československá husitská Spořilov</title>
+      <meta
+        name="description"
+        content="Náboženská obec Církve československé husitské v Praze 4 - Spořilov. Farář Jan Hlavsa."
+      />
+      <meta
+        property="og:title"
+        content="CČSH Spořilov – Církev československá husitská Spořilov"
+      />
+      <meta property="og:locale" content="cs_CZ" />
+      <meta
+        name="description"
+        content="Náboženská obec Církve československé husitské v Praze 4 - Spořilov. Farář Jan Hlavsa."
+      />
+      <meta
+        property="og:description"
+        content="Náboženská obec Církve československé husitské v Praze 4 - Spořilov. Farář Jan Hlavsa."
+      />
+      <link rel="canonical" href="https://ccshsporilov.cz/" />
+      <meta property="og:url" content="https://ccshsporilov.cz/" />
+      <meta property="og:site_name" content="CČSH Spořilov" />
+      <meta property="og:type" content="website" />
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "description": "Náboženská obec Církve československé husitské v Praze 4 - Spořilov. Farář Jan Hlavsa.",
+          "headline": "CČSH Spořilov",
+          "name": "CČSH Spořilov",
+          "url": "https://ccshsporilov.cz/"
+        }
+      </script>
+
+      <!-- Favicons
+================================================== -->
+      <!-- 128x128 -->
+      <link rel="shortcut icon" type="image/ico" href="/images/favicon.ico" />
+      <link rel="icon" type="image/png" href="/images/favicon.png" />
+
+      <!-- 192x192, as recommended for Android
+  http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+  -->
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="/images/favicon-192.png"
+      />
+
+      <!-- ANALYTICS
+================================================== -->
+
+      <!-- MS Clarity -->
+
+      <script type="text/javascript">
       (function (c, l, a, r, i, t, y) {
         c[a] =
           c[a] ||
@@ -35,6 +83,91 @@
         y.parentNode.insertBefore(t, y);
       })(window, document, "clarity", "script", "iz4gdoyxgj");
     </script>
+
+      <!-- CSS
+================================================== -->
+      <!-- env: production -->
+
+      <script src="https://cdn.tailwindcss.com"></script>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300;500;700&display=swap"
+        rel="stylesheet"
+      />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      :root {
+        --cards: 4;
+        --cardHeight: 87vh;
+        --cardTopPadding: 1.5em;
+        --cardMargin: 4vw;
+      }
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      #cards {
+        list-style: none;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(var(--cards), var(--cardHeight));
+        gap: var(--cardMargin);
+        padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+        margin-bottom: var(--cardMargin);
+      }
+
+      #card1 {
+        --index: 1;
+      }
+      #card2 {
+        --index: 2;
+      }
+      #card3 {
+        --index: 3;
+      }
+      #card4 {
+        --index: 4;
+      }
+
+      .card {
+        position: sticky;
+        top: 0;
+        padding-top: calc(var(--index) * var(--cardTopPadding));
+      }
+
+      #card1 .card-body {
+        background-color: #52b2cf;
+      }
+      #card2 .card-body {
+        /* background-color: #7EC4CF; */
+        background-color: #e5a36f;
+      }
+      #card3 .card-body {
+        background-color: #9cadce;
+      }
+      #card4 .card-body {
+        background-color: #d4afb9;
+      }
+
+      .card-body {
+        box-sizing: border-box;
+        padding: 30px;
+        border-radius: 50px;
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
+        height: var(--cardHeight);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s;
+      }
+    </style>
   </head>
   <body>
     <nav
@@ -88,7 +221,7 @@
       <section
         class="pt-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100"
       >
-        <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+        <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
           <h1
             class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-orange-950 md:text-5xl lg:text-6xl"
           >
@@ -130,6 +263,32 @@
               </div>
             </a>
           </div>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <ul id="cards">
+            <li class="card" id="card1">
+              <div class="card-body">
+                <h2>Card 1</h2>
+              </div>
+            </li>
+            <li class="card" id="card2">
+              <div class="card-body">
+                <h2>Card 2</h2>
+              </div>
+            </li>
+            <li class="card" id="card3">
+              <div class="card-body">
+                <h2>Card 3</h2>
+              </div>
+            </li>
+            <li class="card" id="card4">
+              <div class="card-body">
+                <h2>Card 4</h2>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
     </main>
