@@ -109,6 +109,12 @@
       .card-container {
         width: 90%;
         margin: 0 auto;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 0, 0),
+          rgba(255, 255, 0, 1),
+          rgba(255, 0, 0, 1)
+        );
       }
 
       #cards {
@@ -142,12 +148,7 @@
       }
 
       .card-body {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 0, 0),
-          rgba(255, 255, 0, 1),
-          rgba(255, 0, 0, 1)
-        );
+        background: none;
       }
 
       #card1 .card-body {
@@ -270,13 +271,30 @@
               </div>
             </li>
             <li class="card" id="card2">
-              <div class="card-body">
-                <h2>Card 2</h2>
+              <div class="card-body flex flex-col md:flex-row gap-4">
+                <div
+                  class="w-full md:w-1/2 bg-local"
+                  style="background-image: url(./images/ccsh-Group4.svg)"
+                >
+                  <h2><a href="/historie.html">Služby pastorační péče</a></h2>
+                </div>
+
+                <div
+                  class="w-full md:w-1/2 bg-local"
+                  style="background-image: url(./images/ccsh-Group4.svg)"
+                >
+                  <h2>
+                    <a href="/historie.html">Služby pro domovy pro seniory</a>
+                  </h2>
+                </div>
               </div>
             </li>
             <li class="card" id="card3">
-              <div class="card-body">
-                <h2>Card 3</h2>
+              <div
+                class="card-bodybg-local"
+                style="background-image: url(./images/ccsh-Group4.svg)"
+              >
+                <h2><a href="/historie.html">Fotogalerie</a></h2>
               </div>
             </li>
             <li class="card" id="card4">
