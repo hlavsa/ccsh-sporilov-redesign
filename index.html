@@ -188,10 +188,24 @@
         align-items: center;
         transition: all 0.5s;
       }
+      .expanding-card {
+        scroll-snap-align: start;
+
+        animation: expand 0.5s ease-out forwards;
+      }
+
+      @keyframes expand {
+        from {
+          width: 80%;
+        }
+        to {
+          width: 100%;
+        }
+      }
     </style>
   </head>
   <body
-    class="pt-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-fit"
+    class="py-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-fit"
   >
     <nav
       class="fixed top-6 left-1/2 transform -translate-x-1/2 inline-flex left-0 mx-auto justify-between bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 w-7/12 rounded-4xl z-10"
@@ -262,7 +276,7 @@
       <section class="pt-16">
         <div class="py-8 md:py-24 px-4 mx-auto max-w-4xl">
           <h2
-            class="font-['IBM_Plex_Serif'] mb-4 text-2xl font-bold tracking-tight leading-none text-orange-950 md:text-7xl"
+            class="font-['IBM_Plex_Serif'] mb-4 text-xl font-bold tracking-tight leading-none text-orange-950 md:text-7xl"
           >
             Nadcházející bohoslužby a události
           </h2>
@@ -271,7 +285,7 @@
       <section class="card-holder-bg">
         <div class="card-container max-w-4xl mx-auto">
           <ul id="cards">
-            <li class="card" id="card1">
+            <li class="card max-w-4xl w-11/12" id="card1">
               <div
                 class="card-body bg-cover bg-no-repeat"
                 style="background-image: url(./images/historie-sporilova.jpg)"
@@ -285,7 +299,7 @@
                 </h2>
               </div>
             </li>
-            <li class="card" id="card2">
+            <li class="card max-w-4xl w-11/12" id="card2">
               <div class="card-body flex flex-col md:flex-row gap-4">
                 <div
                   class="w-full md:w-1/2 bg-cover bg-no-repeat"
@@ -316,7 +330,7 @@
                 </div>
               </div>
             </li>
-            <li class="card" id="card3">
+            <li class="card max-w-4xl w-11/12" id="card3">
               <div
                 class="card-body bg-cover bg-no-repeat"
                 style="background-image: url(./images/foto.jpg)"
@@ -330,8 +344,8 @@
                 </h2>
               </div>
             </li>
-            <li class="card" id="card4">
-              <div class="card-body bg-[#b23118]">
+            <li class="card expanding-card" id="card4">
+              <div class="card-body max-w-4xl w-11/12 bg-[#b23118]">
                 <h2 class="text-white text-4xl md:text-6xl font-bold">
                   Card 4
                 </h2>
