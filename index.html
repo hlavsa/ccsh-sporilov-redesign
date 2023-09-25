@@ -188,33 +188,16 @@
         align-items: center;
         transition: all 0.5s;
       }
-      .expanding-card {
+      .stretch-me {
         width: 80%;
-        transition: width 0.5s ease;
+        margin: 0 auto;
+        transition: width 1.2s ease;
       }
 
-      .expanding-card.in-view {
+      .stretched {
         width: 100%;
       }
     </style>
-    <script>
-      // Select the element
-      const div = document.querySelector(".expanding-card");
-
-      // Create intersection observer
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            div.classList.add("in-view");
-          } else {
-            div.classList.remove("in-view");
-          }
-        });
-      });
-
-      // Observe the element
-      observer.observe(div);
-    </script>
   </head>
   <body
     class="py-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-fit"
@@ -288,16 +271,16 @@
       <section class="pt-16">
         <div class="py-8 md:py-24 px-4 mx-auto max-w-4xl">
           <h2
-            class="font-['IBM_Plex_Serif'] mb-4 text-xl font-bold tracking-tight leading-none text-orange-950 md:text-7xl"
+            class="font-['IBM_Plex_Serif'] mb-4 text-2xl font-bold tracking-tight leading-none text-orange-950 md:text-5xl"
           >
             Nadcházející bohoslužby a události
           </h2>
         </div>
       </section>
       <section class="card-holder-bg">
-        <div class="card-container max-w-4xl mx-auto">
+        <div class="card-container">
           <ul id="cards">
-            <li class="card max-w-4xl w-11/12" id="card1">
+            <li class="card max-w-4xl w-11/12 mx-auto" id="card1">
               <div
                 class="card-body bg-cover bg-no-repeat"
                 style="background-image: url(./images/historie-sporilova.jpg)"
@@ -311,7 +294,7 @@
                 </h2>
               </div>
             </li>
-            <li class="card max-w-4xl w-11/12" id="card2">
+            <li class="card max-w-4xl w-11/12 mx-auto" id="card2">
               <div class="card-body flex flex-col md:flex-row gap-4">
                 <div
                   class="w-full md:w-1/2 bg-cover bg-no-repeat"
@@ -342,7 +325,7 @@
                 </div>
               </div>
             </li>
-            <li class="card max-w-4xl w-11/12" id="card3">
+            <li class="card max-w-4xl w-11/12 mx-auto" id="card3">
               <div
                 class="card-body bg-cover bg-no-repeat"
                 style="background-image: url(./images/foto.jpg)"
@@ -356,7 +339,7 @@
                 </h2>
               </div>
             </li>
-            <li class="card expanding-card" id="card4">
+            <li class="card stretch-me" id="card4">
               <div class="card-body bg-[#b23118]">
                 <h2 class="text-white text-4xl md:text-6xl font-bold">
                   Card 4
@@ -388,6 +371,39 @@
 
         ot.innerHTML = losung.ot();
         nt.innerHTML = losung.nt();
+      </script>
+      <script type="text/javascript">
+        // Function to check if an element is in the viewport
+        function isInViewport(element) {
+          var rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <=
+              (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+
+        // Function to stretch the div when in view and keep it stretched
+        function stretchDivWhenInView() {
+          var divToStretch = document.querySelector(".stretch-me");
+
+          if (isInViewport(divToStretch)) {
+            divToStretch.classList.add("stretched");
+            // Remove event listeners once the div is stretched
+            window.removeEventListener("scroll", stretchDivWhenInView);
+            window.removeEventListener("resize", stretchDivWhenInView);
+          }
+        }
+
+        // Check when the page is scrolled or resized
+        window.addEventListener("scroll", stretchDivWhenInView);
+        window.addEventListener("resize", stretchDivWhenInView);
+
+        // Initial check in case the div is already in view when the page loads
+        stretchDivWhenInView();
       </script>
     </main>
   </body>
