@@ -106,6 +106,18 @@
         --cardMargin: 4vw;
       }
 
+      body::after {
+        content: "";
+        background: url(./images/Group5.png);
+        opacity: 0.5;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+      }
+
       .card-holder-bg {
         background: linear-gradient(
           180deg,
@@ -180,7 +192,6 @@
   </head>
   <body
     class="pt-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-fit"
-    style="background-image: url(./images/Group5.png)"
   >
     <nav
       class="fixed top-6 left-1/2 transform -translate-x-1/2 inline-flex left-0 mx-auto justify-between bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 w-7/12 rounded-4xl z-10"
