@@ -106,15 +106,17 @@
         --cardMargin: 4vw;
       }
 
-      .card-container {
-        width: 90%;
-        margin: 0 auto;
+      .card-holder-bg {
         background: linear-gradient(
           180deg,
           rgba(255, 255, 0, 0),
           rgba(255, 255, 0, 1),
           rgba(255, 0, 0, 1)
         );
+      }
+      .card-container {
+        width: 90%;
+        margin: 0 auto;
       }
 
       #cards {
@@ -250,9 +252,7 @@
           </p>
         </div>
       </section>
-      <section
-        class="pt-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100"
-      >
+      <section class="pt-16">
         <div class="py-8 md:py-24 px-4 mx-auto max-w-4xl">
           <h2
             class="font-['IBM_Plex_Serif'] mb-4 text-2xl font-bold tracking-tight leading-none text-orange-950 md:text-7xl"
@@ -261,7 +261,7 @@
           </h2>
         </div>
       </section>
-      <section>
+      <section class="card-holder-bg">
         <div class="card-container">
           <ul id="cards">
             <li class="card" id="card1">
