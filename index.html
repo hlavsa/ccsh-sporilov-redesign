@@ -189,20 +189,32 @@
         transition: all 0.5s;
       }
       .expanding-card {
-        scroll-snap-align: start;
-
-        animation: expand 0.5s ease-out forwards;
+        width: 80%;
+        transition: width 0.5s ease;
       }
 
-      @keyframes expand {
-        from {
-          width: 80%;
-        }
-        to {
-          width: 100%;
-        }
+      .expanding-card.in-view {
+        width: 100%;
       }
     </style>
+    <script>
+      // Select the element
+      const div = document.querySelector(".expanding-card");
+
+      // Create intersection observer
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            div.classList.add("in-view");
+          } else {
+            div.classList.remove("in-view");
+          }
+        });
+      });
+
+      // Observe the element
+      observer.observe(div);
+    </script>
   </head>
   <body
     class="py-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-fit"
@@ -345,7 +357,7 @@
               </div>
             </li>
             <li class="card expanding-card" id="card4">
-              <div class="card-body max-w-4xl w-11/12 bg-[#b23118]">
+              <div class="card-body bg-[#b23118]">
                 <h2 class="text-white text-4xl md:text-6xl font-bold">
                   Card 4
                 </h2>
