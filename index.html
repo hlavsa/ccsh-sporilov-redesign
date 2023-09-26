@@ -213,10 +213,8 @@
         width: 100%;
       }
 
-      .card:last-of-type .card-body:first-of-type {
+      .card:last-of-type .card-body {
         height: auto;
-        border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
       }
     </style>
   </head>
@@ -362,7 +360,9 @@
               </div>
             </li>
             <li class="card stretch-me" id="card4">
-              <div class="card-body bg-[#b23118]">
+              <div
+                class="card-body bg-[#b23118] rounded-bl-none rounded-br-none"
+              >
                 <div class="max-w-4xl w-11/12 mx-auto pt-16">
                   <h2
                     class="font-['IBM_Plex_Serif'] text-white text-4xl md:text-6xl font-bold pb-16"
@@ -418,66 +418,66 @@
                         <div class="utilities-mt-70_20">
                           <div class="articlelist__banner">
                             <h3
-                              class="font-['IBM_Plex_Serif'] text-black text-4xl md:text-6xl font-bold"
+                              class="font-['IBM_Plex_Serif'] text-black text-xl md:text-2xl font-bold"
                             >
                               Členové Rady starších
                             </h3>
 
                             <div class="py-8">
-                              <div class="flex flex-col">
+                              <div class="flex flex-col gap-2">
                                 <h4
-                                  class="font-['IBM_Plex_Serif'] text-grey-700 text-xl md:text-2xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
                                 >
                                   Ing. Jiří Ach
                                 </h4>
                                 <p
-                                  class="font-['IBM_Plex_Serif'] text-black text-l md:text-xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
                                 >
                                   Předseda rady starších
                                 </p>
                                 <a
                                   href="tel:+420272761280"
-                                  class="link link--red"
+                                  class="font-['IBM_Plex_Serif'] text-[#b23118] text-m md:text-l underline hover:underline"
                                   >+420 272 76 19 61</a
                                 >
                               </div>
                             </div>
 
                             <div class="py-8">
-                              <div class="flex flex-col">
+                              <div class="flex flex-col gap-2">
                                 <h4
-                                  class="font-['IBM_Plex_Serif'] text-grey-700 text-xl md:text-2xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
                                 >
                                   Ing. Jiří Ach
                                 </h4>
                                 <p
-                                  class="font-['IBM_Plex_Serif'] text-black text-l md:text-xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
                                 >
                                   Předseda rady starších
                                 </p>
                                 <a
                                   href="tel:+420272761280"
-                                  class="link link--red"
+                                  class="font-['IBM_Plex_Serif'] text-[#b23118] text-m md:text-l underline hover:underline"
                                   >+420 272 76 19 61</a
                                 >
                               </div>
                             </div>
 
                             <div class="py-8">
-                              <div class="flex flex-col">
+                              <div class="flex flex-col gap-2">
                                 <h4
-                                  class="font-['IBM_Plex_Serif'] text-grey-700 text-xl md:text-2xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
                                 >
                                   Ing. Jiří Ach
                                 </h4>
                                 <p
-                                  class="font-['IBM_Plex_Serif'] text-black text-l md:text-xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
                                 >
                                   Předseda rady starších
                                 </p>
                                 <a
                                   href="tel:+420272761280"
-                                  class="link link--red"
+                                  class="font-['IBM_Plex_Serif'] text-[#b23118] font-bold text-m md:text-l underline hover:underline"
                                   >+420 272 76 19 61</a
                                 >
                               </div>
@@ -490,7 +490,7 @@
                                 <div class="location-wrapper">
                                   <a
                                     href="\personalni-slozeni"
-                                    class="link link--red"
+                                    class="font-['IBM_Plex_Serif'] text-[#b23118] font-bold text-m md:text-l underline hover:underline"
                                     >Více informací k personálnímu složení</a
                                   >
                                 </div>
@@ -506,107 +506,129 @@
                       <div class="card-body bg-[#fbf6f1]">
                         <div class="articlelist__banner">
                           <h3
-                            class="font-['IBM_Plex_Serif'] text-black text-4xl md:text-6xl font-bold"
+                            class="font-['IBM_Plex_Serif'] text-black text-xl md:text-2xl font-bold py-6"
                           >
                             Základní informace
                           </h3>
-                          <div class="stack stack--align_top stack--spacing">
-                            <div class="stack__item stack__fluid">
-                              <div class="location-wrapper">
-                                <h4 class="utilities-color-grey location-title">
-                                  Kde nás najdete
-                                </h4>
-                                <p
-                                  class="utilities-font-15_13 location-address"
-                                >
-                                  Jihovýchodní VII. 945/2, 141 00 Praha 4 -
-                                  Spořilov
-                                </p>
-                                <div class="map location-map-wrapper">
-                                  <div class="location-map__container">
-                                    <img
-                                      class="image__img image__loaded"
-                                      alt="Mapa ukazující, kde se Spořilov nachází"
-                                      src="./images/map.PNG"
-                                    />
-                                  </div>
-                                  <div class="map__button map__align-left_none">
-                                    <a
-                                      href="https://mapy.cz/?q=50.0410308N%2C+14.4828381E"
-                                      target="_blank"
-                                      rel="noopener"
-                                      class="button"
-                                      ><span class="button__content"
-                                        ><span class="button__text"
-                                          >Otevřít na Mapy.cz</span
-                                        ></span
-                                      ></a
-                                    >
-                                  </div>
+                          <div class="py-8">
+                            <div class="flex flex-col gap-2">
+                              <h4
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                              >
+                                Kde nás najdete
+                              </h4>
+                              <p
+                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                              >
+                                Jihovýchodní VII. 945/2, 141 00 Praha 4 -
+                                Spořilov
+                              </p>
+                              <div class="map location-map-wrapper">
+                                <div class="location-map__container">
+                                  <img
+                                    class="image__img image__loaded"
+                                    alt="Mapa ukazující, kde se Spořilov nachází"
+                                    src="./images/map.PNG"
+                                  />
+                                </div>
+                                <div class="map__button map__align-left_none">
+                                  <a
+                                    href="https://mapy.cz/?q=50.0410308N%2C+14.4828381E"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="button"
+                                    ><span class="button__content"
+                                      ><span class="button__text"
+                                        >Otevřít na Mapy.cz</span
+                                      ></span
+                                    ></a
+                                  >
                                 </div>
                               </div>
                             </div>
                           </div>
 
-                          <div class="stack stack--align_top stack--spacing">
-                            <div class="stack__item stack__fluid">
-                              <div class="location-wrapper">
-                                <h4 class="utilities-color-grey location-title">
-                                  Úřední hodiny
-                                </h4>
-                                <p class="utilities-font-15_13 location-addres">
-                                  Každé úterý, od 13:00 do 16:00
-                                </p>
-                              </div>
+                          <div class="py-8">
+                            <div class="flex flex-col gap-2">
+                              <h4
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                              >
+                                Úřední hodiny
+                              </h4>
+                              <p
+                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                              >
+                                Každé úterý, od 13:00 do 16:00
+                              </p>
                             </div>
                           </div>
 
-                          <div class="stack stack--align_top stack--spacing">
-                            <div class="stack__item stack__fluid">
-                              <div class="location-wrapper">
-                                <h4 class="utilities-color-grey location-title">
-                                  E-mail na farnost a osobní kontakt na faráře
-                                </h4>
-                                <p class="utilities-font-15_13 location-addres">
-                                  Telefon na faráře:
-                                  <a href="tel:728061364" class="link link--red"
-                                    >728 06 13 64</a
-                                  >. Volejte kdykoliv, vždy zavolá zpět.
-                                </p>
+                          <div class="py-8">
+                            <div class="flex flex-col gap-2">
+                              <h4
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                              >
+                                E-mail na farnost a osobní kontakt na faráře
+                              </h4>
+                              <p
+                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                              >
+                                Telefon na faráře:
                                 <a
-                                  href="mailto:ccsh.sporilov@seznam.cz"
-                                  class="link link--red"
-                                  >ccsh.sporilov@seznam.cz</a
-                                ><br />
-                                <a
-                                  href="mailto:jan.hlavsa@seznam.cz"
-                                  class="link link--red"
-                                  >jan.hlavsa@seznam.cz</a
-                                >
-                              </div>
+                                  href="tel:728061364"
+                                  class="font-['IBM_Plex_Serif'] text-[#b23118] font-bold text-m md:text-l underline hover:underline"
+                                  >728 06 13 64</a
+                                >. Volejte kdykoliv, vždy zavolá zpět.
+                              </p>
+
+                              <a
+                                href="mailto:ccsh.sporilov@seznam.cz"
+                                class="font-['IBM_Plex_Serif'] text-[#b23118] font-bold text-m md:text-l underline hover:underline"
+                                >ccsh.sporilov@seznam.cz</a
+                              ><br />
+                              <a
+                                href="mailto:jan.hlavsa@seznam.cz"
+                                class="font-['IBM_Plex_Serif'] text-[#b23118] font-bold text-m md:text-l underline hover:underline"
+                                >jan.hlavsa@seznam.cz</a
+                              >
                             </div>
                           </div>
 
-                          <div class="stack stack--align_top stack--spacing">
-                            <div class="stack__item stack__fluid">
-                              <div class="location-wrapper">
-                                <h4 class="utilities-color-grey location-title">
-                                  Přispět na chod obce
-                                </h4>
-                                <p class="utilities-font-15_13 location-addres">
-                                  Bankovní účet: 68108309/0800
-                                </p>
-                              </div>
+                          <div class="py-8">
+                            <div class="flex flex-col gap-2">
+                              <h4
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                              >
+                                Přispět na chod obce
+                              </h4>
+                              <p
+                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                              >
+                                Bankovní účet: 68108309/0800
+                              </p>
                             </div>
                           </div>
 
                           <hr />
+
+                          <div class="py-8">
+                            <div class="flex flex-col gap-2">
+                              <h4
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                              >
+                                Aktivity obce
+                              </h4>
+                              <p
+                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                              >
+                                Bankovní účet: 68108309/0800
+                              </p>
+                            </div>
+                          </div>
                           <div class="stack stack--align_top stack--spacing">
                             <div class="stack__item stack__fluid">
                               <div class="location-wrapper">
-                                <h4 class="utilities-color-grey">
-                                  Aktivity obce
-                                </h4>
+                                <h4 class="utilities-color-grey"></h4>
                                 <div
                                   class="paragraph set-width"
                                   style="padding-left: 0"
