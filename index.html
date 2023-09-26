@@ -100,7 +100,7 @@
       }
       :root {
         --cards: 4;
-        --cardHeight: 87vh;
+        --cardHeight: 80vh;
         --cardTopPadding: 1.5em;
         --cardMargin: 4vw;
         --colorWhite: #fbf6f1;
@@ -235,7 +235,7 @@
     </style>
   </head>
   <body
-    class="py-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-fit antialiased"
+    class="py-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-cover antialiased"
   >
     <nav
       class="fixed top-6 left-1/2 transform -translate-x-1/2 inline-flex left-0 mx-auto justify-between bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10 max-w-6/12 rounded-4xl z-10"
@@ -332,7 +332,7 @@
             <li class="card max-w-4xl w-11/12 mx-auto" id="card2">
               <div class="card-body flex flex-col md:flex-row p-0">
                 <div
-                  class="w-full md:w-1/2 bg-fit bg-center bg-no-repeat relative items-start card-left-img"
+                  class="w-full md:w-1/2 bg-cover bg-center bg-no-repeat relative items-start card-left-img"
                   style="background-image: url(./images/pastor-compressed.jpg)"
                 >
                   <h3
@@ -347,7 +347,7 @@
                 </div>
 
                 <div
-                  class="w-full md:w-1/2 bg-fit bg-center bg-no-repeat relative items-start card-right-img"
+                  class="w-full md:w-1/2 bg-cover bg-center bg-no-repeat relative items-start card-right-img"
                   style="
                     background-image: url(./images/retirement-compressed.jpg);
                   "
@@ -389,11 +389,11 @@
                   >
                     Kontakty a úřední hodiny
                   </h2>
-                  <div class="grid grid-cols-2 grid-rows-3 gap-4">
+                  <div class="grid grid-cols-2 grid-rows-3">
                     <!-- First Card -->
                     <div class="col-span-1 row-span-2 p-4">
                       <div
-                        class="card-body bg-fit bg-center bg-no-repeat relative"
+                        class="card-body bg-cover bg-center bg-no-repeat relative"
                         style="background-image: url(./images/galerie-2.jpg)"
                       >
                         <div
@@ -463,7 +463,7 @@
                               </div>
                             </div>
 
-                            <div class="py-8">
+                            <div class="">
                               <div class="flex flex-col gap-2">
                                 <h4
                                   class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
