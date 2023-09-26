@@ -216,6 +216,18 @@
       .card:last-of-type .card-body {
         height: auto;
       }
+
+      .card-body a:after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        background: rgba(255, 255, 255, 0);
+        -ms-high-contrast-adjust: none;
+      }
     </style>
   </head>
   <body
@@ -244,21 +256,21 @@
             </li>
             <li>
               <a
-                href="#"
+                href="#bohosluzby"
                 class="block py-2 pl-3 pr-4 text-orange-950 rounded hover:text-[#b23118] md:hover:bg-transparent md:p-0"
                 >Bohoslužby a události</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#sluzby"
                 class="block py-2 pl-3 pr-4 text-orange-950 rounded hover:text-[#b23118] md:hover:bg-transparent md:p-0"
                 >Služby farnosti</a
               >
             </li>
             <li>
               <a
-                href="#"
+                href="#kontakty"
                 class="block py-2 pl-3 pr-4 text-orange-950 rounded hover:text-[#b23118] md:hover:bg-transparent md:p-0"
                 >Kontakt a úřední hodiny</a
               >
@@ -288,7 +300,7 @@
           </p>
         </div>
       </section>
-      <section class="pt-16">
+      <section class="pt-16" id="bohosluzby">
         <div class="py-8 md:py-24 px-4 mx-auto max-w-4xl">
           <h2
             class="font-['IBM_Plex_Serif'] mb-4 text-2xl font-bold tracking-tight leading-none text-orange-950 md:text-5xl"
@@ -297,30 +309,31 @@
           </h2>
         </div>
       </section>
-      <section class="card-holder-bg">
+      <section class="card-holder-bg" id="sluzby">
+        <h2 class="sr-only">Služby farnosti</h2>
         <div class="card-container">
           <ul id="cards">
-            <li class="card max-w-4xl w-11/12 mx-auto" id="card1">
+            <li class="card max-w-4xl w-11/12 mx-auto relative" id="card1">
               <div
                 class="card-body bg-cover bg-no-repeat items-center"
                 style="background-image: url(./images/historie-sporilova.jpg)"
               >
-                <h2
+                <h3
                   class="font-['IBM_Plex_Serif'] text-white text-2xl md:text-5xl font-bold"
                 >
                   <a class="hover:underline" href="/historie-sporilova.html"
                     >Historie Spořilova</a
                   >
-                </h2>
+                </h3>
               </div>
             </li>
-            <li class="card max-w-4xl w-11/12 mx-auto" id="card2">
+            <li class="card max-w-4xl w-11/12 mx-auto relative" id="card2">
               <div class="card-body flex flex-col md:flex-row p-0">
                 <div
                   class="w-full md:w-1/2 bg-fit bg-center bg-no-repeat relative items-start card-left-img"
                   style="background-image: url(./images/pastor-compressed.jpg)"
                 >
-                  <h2
+                  <h3
                     class="font-['IBM_Plex_Serif'] pl-6 text-white text-2xl md:text-5xl font-bold absolute top-0 left-0 w-full h-full flex items-center justify-center"
                   >
                     <a
@@ -328,7 +341,7 @@
                       href="/sluzby-pastoracni-pece.html"
                       >Služby pastorační péče</a
                     >
-                  </h2>
+                  </h3>
                 </div>
 
                 <div
@@ -337,7 +350,7 @@
                     background-image: url(./images/retirement-compressed.jpg);
                   "
                 >
-                  <h2
+                  <h3
                     class="font-['IBM_Plex_Serif'] pl-6 text-white text-2xl md:text-5xl font-bold absolute top-0 left-0 w-full h-full flex items-center justify-center"
                   >
                     <a
@@ -345,29 +358,30 @@
                       href="/sluzby-pro-domovy-pro-seniory.html"
                       >Služby pro domovy pro seniory</a
                     >
-                  </h2>
+                  </h3>
                 </div>
               </div>
             </li>
-            <li class="card max-w-4xl w-11/12 mx-auto" id="card3">
+            <li class="card max-w-4xl w-11/12 mx-auto relative" id="card3">
               <div
                 class="card-body bg-cover bg-no-repeat items-center"
                 style="background-image: url(./images/foto.jpg)"
               >
-                <h2
+                <h3
                   class="font-['IBM_Plex_Serif'] text-white text-2xl md:text-5xl font-bold"
                 >
                   <a class="hover:underline" href="/fotogalerie.html"
                     >Fotogalerie</a
                   >
-                </h2>
+                </h3>
               </div>
             </li>
             <li class="card stretch-me" id="card4">
               <div
                 class="card-body bg-[#b23118] rounded-bl-none rounded-br-none"
+                id="kontakty"
               >
-                <div class="max-w-4xl w-11/12 mx-auto pt-16">
+                <div class="max-w-4xl w-11/12 mx-auto relative pt-16">
                   <h2
                     class="font-['IBM_Plex_Serif'] text-white text-2xl md:text-5xl font-bold pb-16"
                   >
@@ -406,7 +420,7 @@
                     <div class="col-span-1 row-span-1 p-4">
                       <div class="card-body bg-[#fbf6f1] items-start">
                         <div
-                          class="font-['IBM_Plex_Serif'] text-black text-m md:text-xl"
+                          class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-xl"
                         >
                           <div id="jednota-ot" class="font-bold"></div>
                           <br />
@@ -422,7 +436,7 @@
                         <div class="utilities-mt-70_20">
                           <div class="py-4">
                             <h3
-                              class="font-['IBM_Plex_Serif'] text-black text-xl md:text-2xl font-bold"
+                              class="font-['IBM_Plex_Serif'] text-orange-950 text-xl md:text-2xl font-bold"
                             >
                               Členové Rady starších
                             </h3>
@@ -435,7 +449,7 @@
                                   Ing. Jiří Ach
                                 </h4>
                                 <p
-                                  class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                  class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                                 >
                                   Předseda rady starších
                                 </p>
@@ -455,7 +469,7 @@
                                   Ing. Jiří Ach
                                 </h4>
                                 <p
-                                  class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                  class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                                 >
                                   Předseda rady starších
                                 </p>
@@ -475,7 +489,7 @@
                                   Ing. Jiří Ach
                                 </h4>
                                 <p
-                                  class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                  class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                                 >
                                   Předseda rady starších
                                 </p>
@@ -510,7 +524,7 @@
                       <div class="card-body bg-[#fbf6f1]">
                         <div class="articlelist__banner">
                           <h3
-                            class="font-['IBM_Plex_Serif'] text-black text-xl md:text-3xl font-bold py-6"
+                            class="font-['IBM_Plex_Serif'] text-orange-950 text-xl md:text-3xl font-bold py-6"
                           >
                             Základní informace
                           </h3>
@@ -522,13 +536,13 @@
                                 Kde nás najdete
                               </h4>
                               <p
-                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                               >
                                 Jihovýchodní VII. 945/2, 141 00 Praha 4 -
                                 Spořilov
                               </p>
                               <p
-                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                               >
                                 Vikariát Praha-město-východ, Pražská diecéze
                               </p>
@@ -556,7 +570,7 @@
                               </div>
                             </div>
                           </div>
-
+                          <hr />
                           <div class="py-8">
                             <div class="flex flex-col gap-2">
                               <h4
@@ -565,13 +579,13 @@
                                 Úřední hodiny
                               </h4>
                               <p
-                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                               >
                                 Každé úterý, od 13:00 do 16:00
                               </p>
                             </div>
                           </div>
-
+                          <hr />
                           <div class="py-8">
                             <div class="flex flex-col gap-2">
                               <h4
@@ -580,7 +594,7 @@
                                 E-mail na farnost a osobní kontakt na faráře
                               </h4>
                               <p
-                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                               >
                                 Telefon na faráře:
                                 <a
@@ -602,17 +616,17 @@
                               >
                             </div>
                             <p
-                              class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                              class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                             >
                               IČO: 68405197
                             </p>
                             <p
-                              class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                              class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                             >
                               Datová schránka: fmnvcsr
                             </p>
                           </div>
-
+                          <hr />
                           <div class="py-8">
                             <div class="flex flex-col gap-2">
                               <h4
@@ -621,7 +635,7 @@
                                 Přispět na chod obce
                               </h4>
                               <p
-                                class="font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                class="font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                               >
                                 Bankovní účet: 68108309/0800 (Česká spořitelna)
                               </p>
@@ -638,7 +652,7 @@
                                 Aktivity obce
                               </h4>
                               <ul
-                                class="max-w-md space-y-1 list-disc list-inside font-['IBM_Plex_Serif'] text-black text-m md:text-l"
+                                class="max-w-md space-y-1 list-disc list-inside font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-l"
                               >
                                 <li
                                   class="utilities-font-15_13 location-addres"
