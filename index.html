@@ -213,7 +213,7 @@
         width: 100%;
       }
 
-      .card:last-of-type .card-body {
+      .card:last-of-type .card-body:first-of-type {
         height: auto;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
@@ -364,12 +364,14 @@
             <li class="card stretch-me" id="card4">
               <div class="card-body bg-[#b23118]">
                 <div class="max-w-4xl w-11/12 mx-auto pt-16">
-                  <h2 class="text-white text-4xl md:text-6xl font-bold">
+                  <h2
+                    class="font-['IBM_Plex_Serif'] text-white text-4xl md:text-6xl font-bold pb-16"
+                  >
                     Kontakty a úřední hodiny
                   </h2>
                   <div class="grid grid-cols-2 grid-rows-3 gap-4">
                     <!-- First Card -->
-                    <div class="col-span-1 row-span-2 bg-blue-300 p-4">
+                    <div class="col-span-1 row-span-2 p-4">
                       <div
                         class="card-body bg-fit bg-center bg-no-repeat relative"
                         style="background-image: url(./images/galerie-2.jpg)"
@@ -383,8 +385,15 @@
                             Farář, Jan Hlavsa
                           </h2>
                           <p
-                            class="text-white text-xl md:text-2xl font-bold"
-                          ></p>
+                            class="font-['IBM_Plex_Serif'] text-white text-xl md:text-2xl font-bold"
+                          >
+                            Narozen v Ústí nad Labem v roce 1979. Teologické
+                            studium, obor (misijní a charitativní
+                            práce/psychosociální studia – husitská teologie),
+                            dokončil na Husitské teologické fakultě v roce 2016.
+                            V církvi působí od roku 2003 a v roce 2018 byl
+                            vysvěcen na kněze.
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -392,7 +401,9 @@
                     <!-- Second Card -->
                     <div class="col-span-1 row-span-1 p-4">
                       <div class="card-body bg-[#fbf6f1] items-start">
-                        <div class="text-black text-m md:text-xl">
+                        <div
+                          class="font-['IBM_Plex_Serif'] text-black text-m md:text-xl"
+                        >
                           <div id="jednota-ot" class="font-bold"></div>
                           <br />
                           <br />
@@ -406,67 +417,69 @@
                       <div class="card-body bg-[#fbf6f1]">
                         <div class="utilities-mt-70_20">
                           <div class="articlelist__banner">
-                            <h2
-                              class="utilities-font-20_16 articlelist__bannertitle"
+                            <h3
+                              class="font-['IBM_Plex_Serif'] text-black text-4xl md:text-6xl font-bold"
                             >
                               Členové Rady starších
-                            </h2>
+                            </h3>
 
-                            <div class="stack stack--align_top stack--spacing">
-                              <div class="stack__item stack__fluid">
-                                <div class="location-wrapper">
-                                  <h3
-                                    class="utilities-color-grey location-title"
-                                  >
-                                    Ing. Jiří Ach
-                                  </h3>
-                                  <p
-                                    class="utilities-font-15_13 location-addres"
-                                  >
-                                    Předseda rady starších
-                                  </p>
-                                  <a
-                                    href="tel:+420272761280"
-                                    class="link link--red"
-                                    >+420 272 76 19 61</a
-                                  >
-                                </div>
+                            <div class="py-8">
+                              <div class="flex flex-col">
+                                <h4
+                                  class="font-['IBM_Plex_Serif'] text-grey-700 text-xl md:text-2xl font-bold"
+                                >
+                                  Ing. Jiří Ach
+                                </h4>
+                                <p
+                                  class="font-['IBM_Plex_Serif'] text-black text-l md:text-xl font-bold"
+                                >
+                                  Předseda rady starších
+                                </p>
+                                <a
+                                  href="tel:+420272761280"
+                                  class="link link--red"
+                                  >+420 272 76 19 61</a
+                                >
                               </div>
                             </div>
 
-                            <div class="stack stack--align_top stack--spacing">
-                              <div class="stack__item stack__fluid">
-                                <div class="location-wrapper">
-                                  <h3
-                                    class="utilities-color-grey location-title"
-                                  >
-                                    Vladimír Šillinger
-                                  </h3>
-                                  <p
-                                    class="utilities-font-15_13 location-addres"
-                                  >
-                                    Finanční zpravodaj
-                                  </p>
-                                  <a
-                                    href="tel:+420272761280"
-                                    class="link link--red"
-                                    >+420 776 23 75 01</a
-                                  >
-                                </div>
+                            <div class="py-8">
+                              <div class="flex flex-col">
+                                <h4
+                                  class="font-['IBM_Plex_Serif'] text-grey-700 text-xl md:text-2xl font-bold"
+                                >
+                                  Ing. Jiří Ach
+                                </h4>
+                                <p
+                                  class="font-['IBM_Plex_Serif'] text-black text-l md:text-xl font-bold"
+                                >
+                                  Předseda rady starších
+                                </p>
+                                <a
+                                  href="tel:+420272761280"
+                                  class="link link--red"
+                                  >+420 272 76 19 61</a
+                                >
                               </div>
                             </div>
 
-                            <div class="stack stack--align_top stack--spacing">
-                              <div class="stack__item stack__fluid">
-                                <div class="location-wrapper">
-                                  <h3 class="location-title">Další členové</h3>
-                                  <h3 class="utilities-color-grey">
-                                    Ing. Vladimír Prchlík
-                                  </h3>
-                                  <h3 class="utilities-color-grey">
-                                    Marcela Šmídová
-                                  </h3>
-                                </div>
+                            <div class="py-8">
+                              <div class="flex flex-col">
+                                <h4
+                                  class="font-['IBM_Plex_Serif'] text-grey-700 text-xl md:text-2xl font-bold"
+                                >
+                                  Ing. Jiří Ach
+                                </h4>
+                                <p
+                                  class="font-['IBM_Plex_Serif'] text-black text-l md:text-xl font-bold"
+                                >
+                                  Předseda rady starších
+                                </p>
+                                <a
+                                  href="tel:+420272761280"
+                                  class="link link--red"
+                                  >+420 272 76 19 61</a
+                                >
                               </div>
                             </div>
 
@@ -490,19 +503,19 @@
 
                     <!-- Fourth Card -->
                     <div class="col-span-2 row-span-1 p-4">
-                      <div class="card-body bg-white">
+                      <div class="card-body bg-[#fbf6f1]">
                         <div class="articlelist__banner">
-                          <h4
-                            class="utilities-font-20_16 articlelist__bannertitle"
+                          <h3
+                            class="font-['IBM_Plex_Serif'] text-black text-4xl md:text-6xl font-bold"
                           >
                             Základní informace
-                          </h4>
+                          </h3>
                           <div class="stack stack--align_top stack--spacing">
                             <div class="stack__item stack__fluid">
                               <div class="location-wrapper">
-                                <h3 class="utilities-color-grey location-title">
+                                <h4 class="utilities-color-grey location-title">
                                   Kde nás najdete
-                                </h3>
+                                </h4>
                                 <p
                                   class="utilities-font-15_13 location-address"
                                 >
@@ -538,9 +551,9 @@
                           <div class="stack stack--align_top stack--spacing">
                             <div class="stack__item stack__fluid">
                               <div class="location-wrapper">
-                                <h3 class="utilities-color-grey location-title">
+                                <h4 class="utilities-color-grey location-title">
                                   Úřední hodiny
-                                </h3>
+                                </h4>
                                 <p class="utilities-font-15_13 location-addres">
                                   Každé úterý, od 13:00 do 16:00
                                 </p>
@@ -551,9 +564,9 @@
                           <div class="stack stack--align_top stack--spacing">
                             <div class="stack__item stack__fluid">
                               <div class="location-wrapper">
-                                <h3 class="utilities-color-grey location-title">
+                                <h4 class="utilities-color-grey location-title">
                                   E-mail na farnost a osobní kontakt na faráře
-                                </h3>
+                                </h4>
                                 <p class="utilities-font-15_13 location-addres">
                                   Telefon na faráře:
                                   <a href="tel:728061364" class="link link--red"
@@ -577,9 +590,9 @@
                           <div class="stack stack--align_top stack--spacing">
                             <div class="stack__item stack__fluid">
                               <div class="location-wrapper">
-                                <h3 class="utilities-color-grey location-title">
+                                <h4 class="utilities-color-grey location-title">
                                   Přispět na chod obce
-                                </h3>
+                                </h4>
                                 <p class="utilities-font-15_13 location-addres">
                                   Bankovní účet: 68108309/0800
                                 </p>
@@ -591,9 +604,9 @@
                           <div class="stack stack--align_top stack--spacing">
                             <div class="stack__item stack__fluid">
                               <div class="location-wrapper">
-                                <h3 class="utilities-color-grey">
+                                <h4 class="utilities-color-grey">
                                   Aktivity obce
-                                </h3>
+                                </h4>
                                 <div
                                   class="paragraph set-width"
                                   style="padding-left: 0"
@@ -636,22 +649,6 @@
               </div>
             </li>
           </ul>
-        </div>
-      </section>
-      <section
-        class="bg-[#b23118] max-w-4xl mx-auto text-white font-['IBM_Plex_Serif']"
-      >
-        <div class="articlelist__banner">
-          <div
-            id="jednota-ot"
-            class="articlelist__banner__motto utilities-fweight-700"
-          ></div>
-          <br />
-          <br />
-          <div
-            id="jednota-nt"
-            class="articlelist__banner__motto utilities-fweight-700"
-          ></div>
         </div>
       </section>
       <script type="text/javascript">
