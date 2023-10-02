@@ -183,7 +183,7 @@
       }
 
       #card4 .card-body {
-        background-position: 100%;
+        background-position: 0%;
       }
 
       .card-body {
@@ -193,8 +193,15 @@
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
         height: var(--cardHeight);
         display: grid;
-        justify-content: center;
+        justify-content: left;
         transition: all 0.5s;
+      }
+
+      /* Desktop styles */
+      @media (min-width: 768px) {
+        .card-body {
+          justify-content: center;
+        }
       }
 
       .card-body .card-left-img {
@@ -327,15 +334,15 @@
 
     <main>
       <section>
-        <div class="py-8 md:py-24 px-4 mx-auto h-4/5 max-w-4xl">
+        <div class="py-8 md:py-24 px-4 mx-auto h-2/5 md:h-4/5 max-w-4xl">
           <h1
-            class="font-['IBM_Plex_Serif'] mb-4 text-5xl font-bold tracking-tight leading-none text-orange-950 md:text-7xl"
+            class="font-['IBM_Plex_Serif'] mb-4 font-bold tracking-tight leading-none text-orange-950 text-7xl"
           >
             Náboženská obec CČSH
             <br />Praha-Spořilov
           </h1>
           <p
-            class="font-['IBM_Plex_Serif'] mb-8 mt-12 font-normal text-orange-950 text-xl"
+            class="font-['IBM_Plex_Serif'] mb-8 mt-12 font-normal text-orange-950 text-xl w-3/4 md:w-full"
           >
             Založena v roce
             <span class="font-bold text-[#b23118]">1938</span>.<br />
@@ -352,7 +359,7 @@
           >
             Nadcházející bohoslužby a události
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 py-8 gap-8">
+          <div class="grid grid-cols-3 py-8 gap-4 md:gap-8">
             <div
               class="date-card w-3/4 md:w-full bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-50"
             >
@@ -423,7 +430,7 @@
                 style="background-image: url(./images/historie-sporilova.jpg)"
               >
                 <h3
-                  class="font-['IBM_Plex_Serif'] text-white text-2xl md:text-5xl font-bold"
+                  class="font-['IBM_Plex_Serif'] text-white text-5xl font-bold"
                 >
                   <a class="hover:underline" href="/historie-sporilova.html"
                     >Historie Spořilova</a
@@ -438,7 +445,7 @@
                   style="background-image: url(./images/pastor-compressed.jpg)"
                 >
                   <h3
-                    class="font-['IBM_Plex_Serif'] text-center px-2 text-white text-2xl md:text-5xl font-bold absolute top-0 left-0 w-full h-full flex items-center justify-center"
+                    class="font-['IBM_Plex_Serif'] text-center px-2 text-white text-5xl font-bold absolute top-0 left-0 w-full h-full flex items-center justify-center"
                   >
                     <a
                       class="hover:underline"
@@ -455,7 +462,7 @@
                   "
                 >
                   <h3
-                    class="font-['IBM_Plex_Serif'] text-center px-2 text-white text-2xl md:text-5xl font-bold absolute top-0 left-0 w-full h-full flex items-center justify-center"
+                    class="font-['IBM_Plex_Serif'] text-center px-2 text-white text-5xl font-bold absolute top-0 left-0 w-full h-full flex items-center justify-center"
                   >
                     <a
                       class="hover:underline"
@@ -472,7 +479,7 @@
                 style="background-image: url(./images/foto.jpg)"
               >
                 <h3
-                  class="font-['IBM_Plex_Serif'] text-white text-2xl md:text-5xl font-bold"
+                  class="font-['IBM_Plex_Serif'] text-white text-5xl font-bold"
                 >
                   <a class="hover:underline" href="/fotogalerie.html"
                     >Fotogalerie</a
@@ -487,7 +494,7 @@
               >
                 <div class="max-w-4xl w-11/12 mx-auto pt-16">
                   <h2
-                    class="font-['IBM_Plex_Serif'] text-white text-3xl md:text-5xl font-bold pb-16"
+                    class="font-['IBM_Plex_Serif'] text-white text-5xl font-bold pb-16"
                   >
                     Kontakty a úřední hodiny
                   </h2>
@@ -500,7 +507,7 @@
                       >
                         <div class="">
                           <h2
-                            class="absolute top-10 left-10 md:right-10 font-['IBM_Plex_Serif'] text-white text-xl md:text-3xl font-bold"
+                            class="absolute top-10 left-10 md:right-10 font-['IBM_Plex_Serif'] text-white text-5xl font-bold"
                           >
                             Farář, Jan Hlavsa
                           </h2>
@@ -524,7 +531,7 @@
                     <div class="w-full">
                       <div class="card-body bg-[#fbf6f1] h-full items-center">
                         <div
-                          class="font-['IBM_Plex_Serif'] text-orange-950 text-l md:text-xl"
+                          class="font-['IBM_Plex_Serif'] text-orange-950 text-xl"
                         >
                           <div id="jednota-ot" class="font-bold"></div>
                           <br />
@@ -548,7 +555,7 @@
                             <div class="py-8">
                               <div class="flex flex-col gap-2">
                                 <h4
-                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-xl font-bold"
                                 >
                                   Ing. Jiří Ach
                                 </h4>
@@ -568,7 +575,7 @@
                             <div class="">
                               <div class="flex flex-col gap-2">
                                 <h4
-                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-xl font-bold"
                                 >
                                   Vladimír Šillinger
                                 </h4>
@@ -588,7 +595,7 @@
                             <div class="py-8">
                               <div class="flex flex-col gap-2">
                                 <h4
-                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                                  class="font-['IBM_Plex_Serif'] text-gray-600 text-xl font-bold"
                                 >
                                   Další členové
                                 </h4>
@@ -630,14 +637,14 @@
                       <div class="card-body bg-[#fbf6f1] h-auto">
                         <div class="articlelist__banner">
                           <h3
-                            class="font-['IBM_Plex_Serif'] text-orange-950 text-xl md:text-3xl font-bold py-6"
+                            class="font-['IBM_Plex_Serif'] text-orange-950 text-3xl font-bold py-6"
                           >
                             Základní informace
                           </h3>
                           <div class="py-8">
                             <div class="flex flex-col gap-2">
                               <h4
-                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                                class="font-['IBM_Plex_Serif'] text-gray-600 xl font-bold"
                               >
                                 Kde nás najdete
                               </h4>
@@ -689,7 +696,7 @@
                           <div class="py-8">
                             <div class="flex flex-col gap-2">
                               <h4
-                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-xl font-bold"
                               >
                                 Úřední hodiny
                               </h4>
@@ -704,7 +711,7 @@
                           <div class="py-8">
                             <div class="flex flex-col gap-2">
                               <h4
-                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-xl font-bold"
                               >
                                 E-mail na farnost a osobní kontakt na faráře
                               </h4>
@@ -750,7 +757,7 @@
                           <div class="py-8">
                             <div class="flex flex-col gap-2">
                               <h4
-                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-xl font-bold"
                               >
                                 Přispět na chod obce
                               </h4>
@@ -767,7 +774,7 @@
                           <div class="py-8">
                             <div class="flex flex-col gap-2">
                               <h4
-                                class="font-['IBM_Plex_Serif'] text-gray-600 text-l md:text-xl font-bold"
+                                class="font-['IBM_Plex_Serif'] text-gray-600 text-xl font-bold"
                               >
                                 Aktivity obce
                               </h4>
