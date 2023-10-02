@@ -233,21 +233,16 @@
         -ms-high-contrast-adjust: none;
       }
       .date-card {
-        background-color: #fff;
+        background-color: #dee6e6;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 20px;
         text-align: center;
-        width: 200px;
         position: relative; /* Required for positioning pseudo-elements */
       }
 
       .month {
-        font-size: 24px;
-        font-weight: bold;
-        text-transform: uppercase;
-        background-color: red; /* Red background color */
-        color: white; /* White text color for better contrast */
+        background-color: var(--colorRed); /* Red background color */
+        color: var(--colorWhite); /* White text color for better contrast */
         padding: 10px 0; /* Adjust the padding as needed */
         border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
       }
@@ -268,8 +263,7 @@
         top: 0;
         width: 20px;
         height: 20px;
-        background-color: #fff; /* Card background color */
-        border: 2px solid #ddd; /* Border simulating paper edge */
+        background-color: var(--colorWhite); /* Card background color */
         border-radius: 50%; /* Circular shape */
         transform: translateX(-50%); /* Center horizontally */
       }
@@ -358,14 +352,45 @@
           >
             Nadcházející bohoslužby a události
           </h2>
-          <div class="flex flex-col gap-4">
-            <div class="date-card">
-              <div class="month">September</div>
-              <div class="date">27</div>
+          <div class="flex columns-3">
+            <div class="date-card w-full">
+              <div class="month font-['IBM_Plex_Serif'] uppercase font-bold">
+                Září
+              </div>
+              <div
+                class="date font-['IBM_Plex_Serif'] text-orange-950 font-bold"
+              >
+                27
+              </div>
+              <div class="date font-['IBM_Plex_Serif'] text-orange-950">
+                Bohoslužba
+              </div>
             </div>
-            <div class="date-card">
-              <div class="month">September</div>
-              <div class="date">28</div>
+            <div class="date-card w-full">
+              <div class="month font-['IBM_Plex_Serif'] uppercase font-bold">
+                Září
+              </div>
+              <div
+                class="date font-['IBM_Plex_Serif'] text-orange-950 font-bold"
+              >
+                28
+              </div>
+              <div class="date font-['IBM_Plex_Serif'] text-orange-950">
+                Bohoslužba
+              </div>
+            </div>
+            <div class="date-card w-full">
+              <div class="month font-['IBM_Plex_Serif'] uppercase font-bold">
+                Září
+              </div>
+              <div
+                class="date font-['IBM_Plex_Serif'] text-orange-950 font-bold"
+              >
+                28
+              </div>
+              <div class="date font-['IBM_Plex_Serif'] text-orange-950">
+                Bohoslužba
+              </div>
             </div>
           </div>
         </div>
