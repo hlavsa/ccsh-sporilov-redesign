@@ -113,178 +113,6 @@
         color: var(--colorWhite);
         background: var(--colorRed);
       }
-
-      body::after {
-        content: "";
-        background: url(./images/Group5.png);
-        opacity: 0.5;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position-x: 60%;
-        background-attachment: scroll;
-      }
-
-      .card-holder-bg {
-        background: linear-gradient(
-          180deg,
-          rgba(255, 255, 0, 0),
-          var(--colorWhite),
-          var(--colorRed)
-        );
-      }
-
-      #cards {
-        list-style: none;
-        padding-left: 0;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(var(--cards), var(--cardHeight));
-        gap: var(--cardMargin);
-        padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-        margin-bottom: var(--cardMargin);
-      }
-
-      #card1 {
-        --index: 1;
-      }
-      #card2 {
-        --index: 2;
-      }
-      #card3 {
-        --index: 3;
-      }
-      #card4 {
-        --index: 4;
-      }
-
-      .card {
-        position: sticky;
-        top: 0;
-        padding-top: calc(var(--index) * var(--cardTopPadding));
-      }
-
-      .card-body {
-        background: none;
-      }
-
-      #card1 .card-body {
-        background-position: 0%;
-      }
-
-      #card2 .card-body {
-        background-position: 25%;
-      }
-
-      #card3 .card-body {
-        background-position: 50%;
-      }
-
-      #card4 .card-body {
-        background-position: 0%;
-      }
-
-      .card-body {
-        box-sizing: border-box;
-        padding: 30px;
-        border-radius: 50px;
-        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.3);
-        height: var(--cardHeight);
-        display: grid;
-        justify-content: left;
-        transition: all 0.5s;
-      }
-
-      /* Desktop styles */
-      @media (min-width: 768px) {
-        .card-body {
-          justify-content: center;
-        }
-      }
-
-      .card-body .card-left-img {
-        border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
-      }
-
-      .card-body .card-right-img {
-        border-top-right-radius: 50px;
-        border-bottom-right-radius: 50px;
-      }
-
-      .stretch-me {
-        width: 80%;
-        margin: 0 auto;
-        transition: width 1.2s ease;
-      }
-
-      .stretched {
-        width: 100%;
-      }
-
-      #kontakty.card-body {
-        height: auto;
-      }
-
-      .card-body h3 > a:after {
-        content: "";
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        background: rgba(255, 255, 255, 0);
-        -ms-high-contrast-adjust: none;
-      }
-      .date-card {
-        background-color: #dee6e6;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        position: relative; /* Required for positioning pseudo-elements */
-      }
-
-      .month {
-        background-color: var(--colorRed); /* Red background color */
-        color: var(--colorWhite); /* White text color for better contrast */
-        padding: 10px 0; /* Adjust the padding as needed */
-        border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
-      }
-
-      .date {
-        font-size: 48px;
-      }
-
-      .day {
-        font-size: 24px;
-      }
-
-      /* Create two holes at the top using ::before and ::after */
-      .date-card::before,
-      .date-card::after {
-        content: "";
-        position: absolute;
-        top: -5px;
-        width: 20px;
-        height: 20px;
-        background-color: var(--colorWhite); /* Card background color */
-        border-radius: 50%; /* Circular shape */
-        transform: translateX(-50%); /* Center horizontally */
-      }
-
-      .date-card::before {
-        left: 60px;
-      }
-
-      .date-card::after {
-        right: 40px;
-      }
       .paragraph.initial {
         font-weight: 500;
       }
@@ -386,7 +214,7 @@
     <main>
       <section>
         <div class="py-8 md:py-24 px-4 mx-auto h-2/5 md:h-4/5 max-w-4xl">
-          <span class="font-bold text-3xl text-gray-600"
+          <span class="font-bold text-2xl text-gray-600"
             >Náboženská obec Praha-Spořilov
           </span>
           <h1
@@ -394,12 +222,14 @@
           >
             Historie Spořilova
           </h1>
-          <span class="text-gray-600 text-xl">vytvořeno 14. března 2019 </span>
+          <span class="font-['IBM_Plex_Serif'] text-gray-600 text-l"
+            >vytvořeno 14. března 2022</span
+          >
         </div>
       </section>
-      <section class="pt-16 md:pt-24 pb-8 md:pb-16">
+      <section class="pt-16 md:pt-24 pb-8 md:pb-16 px-4 max-w-4xl container">
         <div>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl initial">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl initial">
             Historie pražského Spořilova sahá do dvacátých let minulého století,
             kdy se Městská spořitelna rozhodla postavit moderní město anglického
             zahradního typu, které mělo vyrůst na jihovýchodním okraji Prahy.
@@ -411,7 +241,7 @@
             možnost spolufinancování formou půjčky od spořitelny. Nově
             vybudované zahradní město pak proto dostalo jméno Spořilov.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Přes nejrůznější obtíže, které tak rozsáhlou výstavbu také
             provázely, rostl nový Spořilov rychle. U většiny domků od prvního
             výkopu až do zabydlení nového osadníka trvala stavba kolem jednoho
@@ -421,7 +251,7 @@
             rodin s dětmi. Vzniklo nové menší město v rámci města velkého, tedy
             celé Prahy.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Spořilov začal žít svým specifickým životem, což je viditelné
             dodnes. Vznikaly různé vlastenecké a občanské organizace a spolky,
             které vyvíjely bohatou kulturní, osvětovou, tělovýchovnou a
@@ -432,7 +262,7 @@
             moderní národní církev, Církev československá, která vznikla v lednu
             1920.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Původní zahradní město, o němž jsme právě hovořili, se nazývá též
             „Starý Spořilov“. Současný Spořilov je tvořen původní zástavbou
             spolu s novými sídlišti Spořilov I. a Spořilov II., která vyrostla
@@ -440,9 +270,9 @@
           </p>
         </div>
       </section>
-      <section class="section-pb-90_30">
+      <section class="pt-16 md:pt-24 pb-8 md:pb-16 px-4 max-w-4xl container">
         <div>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl initial">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl initial">
             Celé rodiny proto po skončení první světové války a po založení
             Církve československé vstupovaly do řad této národní církve, neboť
             právě ona dokázala nabídnout nové pojetí křesťanské víry a
@@ -456,7 +286,7 @@
             Není proto náhodou, že se bohoslužby Církve československé po
             dlouhou dobu konaly v prostorách spořilovské Sokolovny.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             První zprávu o činnosti Církve československé na Spořilově nalézáme
             v Zápisové knize ze dne 2. prosince 1923. Bylo to v době, kdy
             Spořilov ještě nebyl postaven. Místní výbor CČS vyvíjel občasnou,
@@ -465,7 +295,7 @@
             Koukolíků“ v Roztylech, později se výbor začal scházet ve
             spořilovské restauraci „U Severů“.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Bohoslužby se tehdy ještě nekonaly, ani nebyla zajištěna pravidelná
             duchovní péče. Místní výbor CČS Spořilov-Záběhlice patřil v době
             počátků k náboženské obci v Michli. V březnu roku 1925 došlo k
@@ -476,7 +306,7 @@
             Doubravských“ na spořilovském náměstí bohoslužbu bratr Hájek,
             duchovní ze sousední michelské náboženské obce CČS.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Koncem dvacátých let již Spořilov začal žít také nový
             nábožensko-církevní život. Místní výbor CČS, složený z nových členů
             Církve československé, si jako svou schůzovní místnost výbor zvolil
@@ -484,7 +314,7 @@
             výbor vyvíjel od počátku velké úsilí o získání vhodné místnosti pro
             bohoslužebná shromáždění.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Osobností, jejíž působení se se významně zapsalo do historie
             spořilovské náboženské obce, byl ThDr. Alois Spisar, jeden ze
             spoluzakladatelů Církve československé a její významný teolog. Na
@@ -497,14 +327,14 @@
             Spisar ve staré truhlárně o Vánocích roku 1930, což bylo vnímáno
             jako velká společenská a náboženská událost.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Snahu o získání vlastní bohoslužební místnosti místní výbor znovu
             oživil v roce 1932, kdy probíhala jednání s Magistrátem hl. m. Prahy
             o možnosti zakoupení kostelíka, který měl být přivezen z
             Podkarpatské Rusi. Později však z tohoto projektu sešlo, zejména pro
             vysoké finanční nároky převozu.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Farní úřad CČS se nacházel v Michli v Táborské ulici, úřední hodiny
             byly denně kromě soboty od 8 do 11 hodin. V Obecné škole na
             Spořilově probíhala náboženská výchova dětí v duchu moderní národní
@@ -513,7 +343,7 @@
             sboru, kde by bylo i místo pro pietní uložení uren – kolumbárium.
             Byl založen „Stavební fond na výstavbu sboru“.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Bohoslužby se od roku 1935 konaly již pravidelně ve třídě nové
             budovy Obecné školy smíšené na Spořilově. Vedle bratra ThDr. Aloise
             Spisara sloužil bohoslužby též bratr duchovní Emil Dlouhý-Pokorný
@@ -522,7 +352,7 @@
             sociální práce CČS, který vyvíjel bohatou sociální a kulturní
             činnost.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             V červnu roku 1939 konal na Spořilově poprvé bohoslužby jáhen
             Vladimír Lenc, tehdejší bohoslovec a pozdější spořilovský duchovní
             bratr. V říjnu téhož roku založil „Jednotu mládeže CČS na
@@ -537,7 +367,7 @@
             Gustav Adolf Procházka, za asistence generálního vikáře bratra Jana
             Lomoze a nově ustanoveného místního faráře, bratra Vladimíra Lence.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             Církev měla na spořilovském náměstí pronajatou místnost pro činnost
             farní kanceláře. V ní se ve válečné době konaly biblické hodiny a
             ideové večery Jednoty mládeže. V roce 1942 skončila architektonická
@@ -549,7 +379,7 @@
             vyvíjela snahu o zbudování vlastního sboru, v důsledku politické
             situace i hospodaření v obci tento záměr nebyl uskutečněn.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             V roce 1959 začalo svépomocí budování vlastního sboru na Spořilově,
             a to v prostorách zadaptovaného rodinného domku v ulici Jihovýchodní
             VII, č. p. 945/2, na jižním okraji Spořilova. Tento domek byl
@@ -559,7 +389,7 @@
             bohoslužba se konala dne 25. ledna 1959, vysvěcení sboru Aloise
             Spisara na Spořilově se konalo dne 2. dubna 1961.
           </p>
-          <p class="font-['IBM_Plex_Serif'] mb-4 text-xl">
+          <p class="font-['IBM_Plex_Serif'] paragraph mb-4 text-xl">
             U příležitostí jubilea 70 let od založení této malé náboženské obce
             se dne 27. března 2011 ve spořilovském sboru konalo slavnostní
             shromáždění, které připomnělo také zásluhy ThDr. Aloise Spisara,
