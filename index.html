@@ -200,9 +200,27 @@
         border-bottom-left-radius: 50px;
       }
 
+      /* Desktop styles */
+      @media (min-width: 768px) {
+        .card-body .card-left-img {
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+          border-bottom-left-radius: 0;
+        }
+      }
+
       .card-body .card-right-img {
         border-top-right-radius: 50px;
         border-bottom-right-radius: 50px;
+      }
+
+      /* Desktop styles */
+      @media (min-width: 768px) {
+        .card-body .card-right-img {
+          border-top-right-radius: 0;
+          border-bottom-left-radius: 50px;
+          border-bottom-right-radius: 50px;
+        }
       }
 
       .stretch-me {
@@ -447,7 +465,7 @@
               </div>
             </li>
             <li class="card max-w-4xl w-11/12 mx-auto" id="card2">
-              <div class="card-body flex flex-col md:flex-row p-0">
+              <div class="card-body grid grid-cols-1 md:grid-cols-2 p-0">
                 <div
                   class="w-full md:w-1/2 bg-center bg-no-repeat relative items-start card-left-img"
                   style="background-image: url(./images/pastor-compressed.jpg)"
