@@ -385,7 +385,7 @@
           >
             Nadcházející bohoslužby a události
           </h2>
-          <div class="grid grid-cols-1 md:grid-cols-3 py-8 gap-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 py-8 gap-8 md:gap-2">
             <div
               class="date-card w-2/4 md:w-3/4 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-50"
             >
@@ -467,7 +467,7 @@
             <li class="card max-w-4xl w-11/12 mx-auto" id="card2">
               <div class="card-body grid grid-cols-1 md:grid-cols-2 p-0">
                 <div
-                  class="w-full md:w-1/2 bg-center bg-no-repeat relative items-start card-left-img"
+                  class="w-full bg-center bg-no-repeat relative items-start card-left-img"
                   style="background-image: url(./images/pastor-compressed.jpg)"
                 >
                   <h3
@@ -482,7 +482,7 @@
                 </div>
 
                 <div
-                  class="w-full md:w-1/2 bg-center bg-no-repeat relative items-start card-right-img"
+                  class="w-full bg-center bg-no-repeat relative items-start card-right-img"
                   style="
                     background-image: url(./images/retirement-compressed.jpg);
                   "
@@ -849,6 +849,36 @@
 
         ot.innerHTML = losung.ot();
         nt.innerHTML = losung.nt();
+      </script>
+      <script>
+        // Get all the anchor links within the list
+        const links = document.querySelectorAll("ul.flex a");
+
+        // Add a scroll event listener to the window
+        window.addEventListener("scroll", () => {
+          // Get the current scroll position
+          const scrollPos = window.scrollY;
+
+          // Iterate through the links
+          links.forEach((link) => {
+            const sectionId = link.getAttribute("href").substring(1); // Get the section ID without the #
+            const section = document.getElementById(sectionId);
+
+            if (section) {
+              // Check if the section is in the viewport
+              const sectionTop = section.offsetTop;
+              const sectionBottom = sectionTop + section.offsetHeight;
+
+              if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                // Add a CSS class to highlight the active link
+                link.classList.add("text-[#b23118]");
+              } else {
+                // Remove the CSS class if the section is not in the viewport
+                link.classList.remove("text-[#b23118]");
+              }
+            }
+          });
+        });
       </script>
       <script type="text/javascript">
         // Function to check if an element is in the viewport
