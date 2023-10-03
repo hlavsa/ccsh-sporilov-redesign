@@ -197,28 +197,28 @@
 
       .card-body .card-left-img {
         border-top-left-radius: 50px;
-        border-bottom-left-radius: 50px;
+        border-top-right-radius: 50px;
+        border-bottom-left-radius: 0;
       }
 
       /* Desktop styles */
       @media (min-width: 768px) {
         .card-body .card-left-img {
           border-top-left-radius: 50px;
-          border-top-right-radius: 50px;
-          border-bottom-left-radius: 0;
+          border-bottom-left-radius: 50px;
         }
       }
 
       .card-body .card-right-img {
-        border-top-right-radius: 50px;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 50px;
         border-bottom-right-radius: 50px;
       }
 
       /* Desktop styles */
       @media (min-width: 768px) {
         .card-body .card-right-img {
-          border-top-right-radius: 0;
-          border-bottom-left-radius: 50px;
+          border-top-right-radius: 50px;
           border-bottom-right-radius: 50px;
         }
       }
@@ -850,7 +850,7 @@
         ot.innerHTML = losung.ot();
         nt.innerHTML = losung.nt();
       </script>
-      <script>
+      <script type="text/javascript">
         // Get all the anchor links within the list
         const links = document.querySelectorAll("ul.flex a");
 
@@ -859,8 +859,11 @@
           // Get the current scroll position
           const scrollPos = window.scrollY;
 
+          // Define the section IDs
+          const sectionIds = ["bohosluzby", "sluzby", "kontakty"];
+
           // Iterate through the links
-          links.forEach((link) => {
+          links.forEach((link, index) => {
             const sectionId = link.getAttribute("href").substring(1); // Get the section ID without the #
             const section = document.getElementById(sectionId);
 
