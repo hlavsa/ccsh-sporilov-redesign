@@ -115,7 +115,10 @@
       }
       #gallery {
         padding-top: 40px;
-        @media screen and (min-width: 991px) {
+      }
+
+      @media screen and (min-width: 991px) {
+        #gallery {
           padding: 60px 30px 0 30px;
         }
       }
@@ -123,10 +126,12 @@
       .img-wrapper {
         position: relative;
         margin-top: 15px;
-        img {
-          width: 100%;
-        }
       }
+
+      .img-wrapper img {
+        width: 100%;
+      }
+
       .img-overlay {
         background: rgba(0, 0, 0, 0.7);
         width: 100%;
@@ -138,10 +143,11 @@
         justify-content: center;
         align-items: center;
         opacity: 0;
-        i {
-          color: #fff;
-          font-size: 3em;
-        }
+      }
+
+      .img-overlay i {
+        color: #fff;
+        font-size: 3em;
       }
 
       #overlay {
@@ -159,157 +165,144 @@
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
-        img {
-          margin: 0;
-          width: 80%;
-          height: auto;
-          object-fit: contain;
-          padding: 5%;
-          @media screen and (min-width: 768px) {
-            width: 60%;
-          }
-          @media screen and (min-width: 1200px) {
-            width: 50%;
-          }
+      }
+
+      #overlay img {
+        margin: 0;
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+        padding: 5%;
+      }
+
+      @media screen and (min-width: 768px) {
+        #overlay img {
+          width: 60%;
         }
       }
 
-      #nextButton {
-        color: #fff;
-        font-size: 2em;
-        transition: opacity 0.8s;
-        &:hover {
-          opacity: 0.7;
-        }
-        @media screen and (min-width: 768px) {
-          font-size: 3em;
+      @media screen and (min-width: 1200px) {
+        #overlay img {
+          width: 50%;
         }
       }
 
-      #prevButton {
-        color: #fff;
-        font-size: 2em;
-        transition: opacity 0.8s;
-        &:hover {
-          opacity: 0.7;
-        }
-        @media screen and (min-width: 768px) {
-          font-size: 3em;
-        }
-      }
-
+      #nextButton,
+      #prevButton,
       #exitButton {
         color: #fff;
         font-size: 2em;
         transition: opacity 0.8s;
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        &:hover {
-          opacity: 0.7;
-        }
-        @media screen and (min-width: 768px) {
+      }
+
+      #nextButton:hover,
+      #prevButton:hover,
+      #exitButton:hover {
+        opacity: 0.7;
+      }
+
+      @media screen and (min-width: 768px) {
+        #nextButton,
+        #prevButton {
           font-size: 3em;
         }
       }
     </style>
     <script>
       // Gallery image hover
-      $(".img-wrapper").hover(
-        function () {
-          $(this).find(".img-overlay").animate({ opacity: 1 }, 600);
-        },
-        function () {
-          $(this).find(".img-overlay").animate({ opacity: 0 }, 600);
-        }
-      );
+      const imgWrappers = document.querySelectorAll(".img-wrapper");
+
+      imgWrappers.forEach((wrapper) => {
+        wrapper.addEventListener("mouseenter", () => {
+          wrapper.querySelector(".img-overlay").style.opacity = 1;
+        });
+
+        wrapper.addEventListener("mouseleave", () => {
+          wrapper.querySelector(".img-overlay").style.opacity = 0;
+        });
+      });
 
       // Lightbox
-      var $overlay = $('<div id="overlay"></div>');
-      var $image = $("<img>");
-      var $prevButton = $(
-        '<div id="prevButton"><i class="fa fa-chevron-left"></i></div>'
-      );
-      var $nextButton = $(
-        '<div id="nextButton"><i class="fa fa-chevron-right"></i></div>'
-      );
-      var $exitButton = $(
-        '<div id="exitButton"><i class="fa fa-times"></i></div>'
-      );
+      const overlay = document.createElement("div");
+      overlay.id = "overlay";
+      const image = document.createElement("img");
+      const prevButton = document.createElement("div");
+      prevButton.id = "prevButton";
+      prevButton.innerHTML = '<i class="fa fa-chevron-left"></i>';
+      const nextButton = document.createElement("div");
+      nextButton.id = "nextButton";
+      nextButton.innerHTML = '<i class="fa fa-chevron-right"></i>';
+      const exitButton = document.createElement("div");
+      exitButton.id = "exitButton";
+      exitButton.innerHTML = '<i class="fa fa-times"></i>';
 
-      // Add overlay
-      $overlay
-        .append($image)
-        .prepend($prevButton)
-        .append($nextButton)
-        .append($exitButton);
-      $("#gallery").append($overlay);
+      overlay.appendChild(image);
+      overlay.appendChild(prevButton);
+      overlay.appendChild(nextButton);
+      overlay.appendChild(exitButton);
+      document.getElementById("gallery").appendChild(overlay);
 
-      // Hide overlay on default
-      $overlay.hide();
+      overlay.style.display = "none";
 
       // When an image is clicked
-      $(".img-overlay").click(function (event) {
-        // Prevents default behavior
-        event.preventDefault();
-        // Adds href attribute to variable
-        var imageLocation = $(this).prev().attr("href");
-        // Add the image src to $image
-        $image.attr("src", imageLocation);
-        // Fade in the overlay
-        $overlay.fadeIn("slow");
+      const imgOverlays = document.querySelectorAll(".img-overlay");
+
+      imgOverlays.forEach((imgOverlay) => {
+        imgOverlay.addEventListener("click", (event) => {
+          event.preventDefault();
+          const imageLocation =
+            imgOverlay.previousElementSibling.getAttribute("href");
+          image.src = imageLocation;
+          overlay.style.display = "block";
+        });
       });
 
       // When the overlay is clicked
-      $overlay.click(function () {
-        // Fade out the overlay
-        $(this).fadeOut("slow");
+      overlay.addEventListener("click", () => {
+        overlay.style.display = "none";
       });
 
       // When next button is clicked
-      $nextButton.click(function (event) {
-        // Hide the current image
-        $("#overlay img").hide();
-        // Overlay image location
-        var $currentImgSrc = $("#overlay img").attr("src");
-        // Image with matching location of the overlay image
-        var $currentImg = $('#image-gallery img[src="' + $currentImgSrc + '"]');
-        // Finds the next image
-        var $nextImg = $($currentImg.closest(".image").next().find("img"));
-        // All of the images in the gallery
-        var $images = $("#image-gallery img");
-        // If there is a next image
-        if ($nextImg.length > 0) {
-          // Fade in the next image
-          $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
+      nextButton.addEventListener("click", (event) => {
+        image.style.display = "none";
+        const currentImgSrc = image.src;
+        const currentImg = document.querySelector(
+          `#image-gallery img[src="${currentImgSrc}"]`
+        );
+        const nextImg =
+          currentImg.parentElement.nextElementSibling.querySelector("img");
+        const images = document.querySelectorAll("#image-gallery img");
+
+        if (nextImg) {
+          image.src = nextImg.src;
+          image.style.display = "block";
         } else {
-          // Otherwise fade in the first image
-          $("#overlay img").attr("src", $($images[0]).attr("src")).fadeIn(800);
+          image.src = images[0].src;
+          image.style.display = "block";
         }
-        // Prevents overlay from being hidden
+
         event.stopPropagation();
       });
 
       // When previous button is clicked
-      $prevButton.click(function (event) {
-        // Hide the current image
-        $("#overlay img").hide();
-        // Overlay image location
-        var $currentImgSrc = $("#overlay img").attr("src");
-        // Image with matching location of the overlay image
-        var $currentImg = $('#image-gallery img[src="' + $currentImgSrc + '"]');
-        // Finds the next image
-        var $nextImg = $($currentImg.closest(".image").prev().find("img"));
-        // Fade in the next image
-        $("#overlay img").attr("src", $nextImg.attr("src")).fadeIn(800);
-        // Prevents overlay from being hidden
+      prevButton.addEventListener("click", (event) => {
+        image.style.display = "none";
+        const currentImgSrc = image.src;
+        const currentImg = document.querySelector(
+          `#image-gallery img[src="${currentImgSrc}"]`
+        );
+        const prevImg =
+          currentImg.parentElement.previousElementSibling.querySelector("img");
+
+        image.src = prevImg.src;
+        image.style.display = "block";
+
         event.stopPropagation();
       });
 
       // When the exit button is clicked
-      $exitButton.click(function () {
-        // Fade out the overlay
-        $("#overlay").fadeOut("slow");
+      exitButton.addEventListener("click", () => {
+        overlay.style.display = "none";
       });
     </script>
   </head>
