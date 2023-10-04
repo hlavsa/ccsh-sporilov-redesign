@@ -145,24 +145,22 @@
       .modal-content {
         background-color: #fff;
         padding: 20px;
-        border-radius: 5px;
+        border-radius: 50px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         text-align: center;
       }
 
       /* Close button style */
-      .modal-close {
-        background-color: #ff5722;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-      }
 
       .modal-close:hover {
         background-color: #f44336;
+      }
+      li::marker {
+        unicode-bidi: isolate;
+        font-variant-numeric: tabular-nums;
+        white-space-collapse: preserve;
+        text-wrap: nowrap;
+        text-transform: none;
       }
     </style>
     <script>
@@ -293,7 +291,7 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
           <div class="h-full">
             <button
-              class="modal-trigger h-full flex items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
+              class="modal-trigger h-full flex w-full justify-center items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
               data-modal-id="modal-1"
             >
               <h3
@@ -305,7 +303,7 @@
           </div>
           <div class="h-full">
             <button
-              class="modal-trigger h-full flex items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
+              class="modal-trigger h-full flex w-full justify-center items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
               data-modal-id="modal-2"
             >
               <h3
@@ -331,9 +329,79 @@
         <!-- Modals -->
         <div id="modal-1" class="modal">
           <div class="modal-content">
-            <img src="your-image-url-1.jpg" alt="Modal Image 1" />
-            <p>Your modal text for Svátost křtu goes here.</p>
-            <button class="modal-close">Close</button>
+            <figure class="max-w-4xl mx-auto">
+              <img
+                class="w-full bg-cover"
+                style="border-radius: 50px"
+                alt="Křest malého dítěte."
+                src="./images/baptism.jpg"
+              />
+              <figcaption
+                class="font-['IBM_Plex_Serif'] ml-4 text-gray-600 text-m"
+              >
+                Zdroj fotografie:
+
+                <a
+                  class="font-['IBM_Plex_Serif'] text-gray-600 font-bold underline"
+                  rel="noopener"
+                  target="_blank"
+                  href="https://www.stjamesapostlehcn.com.au/?page_id=183"
+                >
+                  St. James The Apostle Parish</a
+                >
+              </figcaption>
+            </figure>
+            <div>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-xl initial"
+              >
+                Žadatel svátosti křtu bez rozdílu věku a pohlaví, je člověk,
+                který se ze svobodné vůle vyznává svou lidskou nedokonalost a
+                touží po společenství církve, věří v Krista jako Božího Syna a
+                přijímá jej jako svého Spasitele. Čekatel této svátosti je
+                systematicky připravován v osobních setkáních. Před udělením
+                samotné svátosti znovuzrození z vody a Ducha Svatého. V čase,
+                který je časem příprav katechumenů hledáme společné poznání a
+                opodstatnění této bytostné proměny, která je vstupem a prvním
+                svátostným úkonem ke kterému se přiznává a uděluje sám Hospodin,
+                který ze své milosti otevírá cestu k dalším svátostem a životu
+                církve.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-xl initial"
+              >
+                Stát se křesťanem, to vyžaduje už od apoštolských dob projít
+                cestu uvedení do křesťanského života v několika úsecích. Tuto
+                cestu lze urazit rychle nebo pozvolna.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-xl"
+              >
+                V každém případě v ní musí být některé podstatné prvky:
+              </p>
+              <ul
+                class="max-w-md space-y-1 list-disc list-inside font-['IBM_Plex_Serif'] text-orange-950 text-xl"
+              >
+                <li>
+                  správu hmotného majetku náboženské obce budovy a pozemku
+                </li>
+                <li>
+                  připravuje k návrhu nájemní smlouvy nové a odpovídá při
+                  ukončení nájmu za předání prostor, a s tím souvisejících
+                  dokumentů
+                </li>
+                <li>poptává nové nájemce</li>
+                <li>odpovídá za technický stav zařízení farní budovy</li>
+                <li>předkládá návrhy oprav k projednání radě starších</li>
+                <li>svolává a vede členy rady starších při jednání</li>
+              </ul>
+            </div>
+
+            <button
+              class="font-['IBM_Plex_Serif'] font-bold modal-close bg-[#b23118] text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5 mr-2 mb-2"
+            >
+              Zavřít
+            </button>
           </div>
         </div>
 
