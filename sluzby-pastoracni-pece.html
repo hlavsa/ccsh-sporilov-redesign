@@ -126,7 +126,73 @@
         vertical-align: bottom;
         color: var(--colorRed);
       }
+      /* CSS for modal */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        backdrop-filter: blur(5px); /* Apply background blur */
+      }
+
+      .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+      }
+
+      /* Close button style */
+      .modal-close {
+        background-color: #ff5722;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+
+      .modal-close:hover {
+        background-color: #f44336;
+      }
     </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const modalTriggers = document.querySelectorAll(".modal-trigger");
+        const modals = document.querySelectorAll(".modal");
+        const modalCloseButtons = document.querySelectorAll(".modal-close");
+
+        modalTriggers.forEach((trigger) => {
+          trigger.addEventListener("click", () => {
+            const modalId = trigger.getAttribute("data-modal-id");
+            const modal = document.getElementById(modalId);
+
+            if (modal) {
+              modal.style.display = "block";
+            }
+          });
+        });
+
+        modalCloseButtons.forEach((closeButton) => {
+          closeButton.addEventListener("click", () => {
+            const modal = closeButton.closest(".modal");
+
+            if (modal) {
+              modal.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </head>
   <body
     class="pt-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-cover antialiased"
@@ -226,28 +292,28 @@
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 py-8">
           <div class="h-full">
-            <a
-              href="#"
-              class="h-full flex items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
+            <button
+              class="modal-trigger h-full flex items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
+              data-modal-id="modal-1"
             >
               <h3
                 class="font-['IBM_Plex_Serif'] text-2xl font-bold tracking-tight text-orange-950"
               >
                 Svátost křtu
               </h3>
-            </a>
+            </button>
           </div>
           <div class="h-full">
-            <a
-              href="#"
-              class="h-full flex items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
+            <button
+              class="modal-trigger h-full flex items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
+              data-modal-id="modal-2"
             >
               <h3
                 class="font-['IBM_Plex_Serif'] text-2xl font-bold tracking-tight text-orange-950"
               >
                 Svátost manželství
               </h3>
-            </a>
+            </button>
           </div>
           <div class="h-full">
             <a
@@ -260,6 +326,22 @@
                 Svátost zpovědní
               </h3>
             </a>
+          </div>
+        </div>
+        <!-- Modals -->
+        <div id="modal-1" class="modal">
+          <div class="modal-content">
+            <img src="your-image-url-1.jpg" alt="Modal Image 1" />
+            <p>Your modal text for Svátost křtu goes here.</p>
+            <button class="modal-close">Close</button>
+          </div>
+        </div>
+
+        <div id="modal-2" class="modal">
+          <div class="modal-content">
+            <img src="your-image-url-2.jpg" alt="Modal Image 2" />
+            <p>Your modal text for Svátost manželství goes here.</p>
+            <button class="modal-close">Close</button>
           </div>
         </div>
         <h2
