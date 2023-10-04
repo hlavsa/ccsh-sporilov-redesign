@@ -138,7 +138,7 @@
         z-index: 1000;
         justify-content: center;
         align-items: center;
-        overflow: hidden;
+        overflow: auto;
         backdrop-filter: blur(5px); /* Apply background blur */
       }
 
@@ -150,17 +150,8 @@
         text-align: center;
       }
 
-      /* Close button style */
-
-      .modal-close:hover {
-        background-color: #f44336;
-      }
-      li::marker {
-        unicode-bidi: isolate;
-        font-variant-numeric: tabular-nums;
-        white-space-collapse: preserve;
-        text-wrap: nowrap;
-        text-transform: none;
+      body.modal-open {
+        overflow: hidden;
       }
     </style>
     <script>
@@ -175,7 +166,8 @@
             const modal = document.getElementById(modalId);
 
             if (modal) {
-              modal.style.display = "block";
+              modal.style.display = "flex";
+              document.body.classList.add("modal-open"); // Add the class to disable background scrolling
             }
           });
         });
@@ -186,6 +178,7 @@
 
             if (modal) {
               modal.style.display = "none";
+              document.body.classList.remove("modal-open"); // Remove the class to enable background scrolling
             }
           });
         });
@@ -328,11 +321,14 @@
         </div>
         <!-- Modals -->
         <div id="modal-1" class="modal">
-          <div class="modal-content">
-            <figure class="max-w-4xl mx-auto">
+          <div class="modal-content w-4/5 mx-auto">
+            <figure class="mx-auto">
               <img
                 class="w-full bg-cover"
-                style="border-radius: 50px"
+                style="
+                  border-radius: calc(24px - min(1dl, 1dt))
+                    calc(24px - min(1dr, 1dt)) 0 0;
+                "
                 alt="Křest malého dítěte."
                 src="./images/baptism.jpg"
               />
@@ -351,7 +347,7 @@
                 >
               </figcaption>
             </figure>
-            <div>
+            <div class="pt-8 w-2/3 text-left mx-auto">
               <p
                 class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-xl initial"
               >
