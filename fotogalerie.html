@@ -88,7 +88,10 @@
 ================================================== -->
     <!-- env: production -->
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -113,198 +116,7 @@
         color: var(--colorWhite);
         background: var(--colorRed);
       }
-      #gallery {
-        padding-top: 40px;
-      }
-
-      @media screen and (min-width: 991px) {
-        #gallery {
-          padding: 60px 30px 0 30px;
-        }
-      }
-
-      .img-wrapper {
-        position: relative;
-        margin-top: 15px;
-      }
-
-      .img-wrapper img {
-        width: 100%;
-      }
-
-      .img-overlay {
-        background: rgba(0, 0, 0, 0.7);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        opacity: 0;
-      }
-
-      .img-overlay i {
-        color: #fff;
-        font-size: 3em;
-      }
-
-      #overlay {
-        background: rgba(0, 0, 0, 0.7);
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
-      #overlay img {
-        margin: 0;
-        width: 80%;
-        height: auto;
-        object-fit: contain;
-        padding: 5%;
-      }
-
-      @media screen and (min-width: 768px) {
-        #overlay img {
-          width: 60%;
-        }
-      }
-
-      @media screen and (min-width: 1200px) {
-        #overlay img {
-          width: 50%;
-        }
-      }
-
-      #nextButton,
-      #prevButton,
-      #exitButton {
-        color: #fff;
-        font-size: 2em;
-        transition: opacity 0.8s;
-      }
-
-      #nextButton:hover,
-      #prevButton:hover,
-      #exitButton:hover {
-        opacity: 0.7;
-      }
-
-      @media screen and (min-width: 768px) {
-        #nextButton,
-        #prevButton {
-          font-size: 3em;
-        }
-      }
     </style>
-    <script>
-      // Gallery image hover
-      const imgWrappers = document.querySelectorAll(".img-wrapper");
-
-      imgWrappers.forEach((wrapper) => {
-        wrapper.addEventListener("mouseenter", () => {
-          wrapper.querySelector(".img-overlay").style.opacity = 1;
-        });
-
-        wrapper.addEventListener("mouseleave", () => {
-          wrapper.querySelector(".img-overlay").style.opacity = 0;
-        });
-      });
-
-      // Lightbox
-      const overlay = document.createElement("div");
-      overlay.id = "overlay";
-      const image = document.createElement("img");
-      const prevButton = document.createElement("div");
-      prevButton.id = "prevButton";
-      prevButton.innerHTML = '<i class="fa fa-chevron-left"></i>';
-      const nextButton = document.createElement("div");
-      nextButton.id = "nextButton";
-      nextButton.innerHTML = '<i class="fa fa-chevron-right"></i>';
-      const exitButton = document.createElement("div");
-      exitButton.id = "exitButton";
-      exitButton.innerHTML = '<i class="fa fa-times"></i>';
-
-      overlay.appendChild(image);
-      overlay.appendChild(prevButton);
-      overlay.appendChild(nextButton);
-      overlay.appendChild(exitButton);
-      document.getElementById("gallery").appendChild(overlay);
-
-      overlay.style.display = "none";
-
-      // When an image is clicked
-      const imgOverlays = document.querySelectorAll(".img-overlay");
-
-      imgOverlays.forEach((imgOverlay) => {
-        imgOverlay.addEventListener("click", (event) => {
-          event.preventDefault();
-          const imageLocation =
-            imgOverlay.previousElementSibling.getAttribute("href");
-          image.src = imageLocation;
-          overlay.style.display = "block";
-        });
-      });
-
-      // When the overlay is clicked
-      overlay.addEventListener("click", () => {
-        overlay.style.display = "none";
-      });
-
-      // When next button is clicked
-      nextButton.addEventListener("click", (event) => {
-        image.style.display = "none";
-        const currentImgSrc = image.src;
-        const currentImg = document.querySelector(
-          `#image-gallery img[src="${currentImgSrc}"]`
-        );
-        const nextImg =
-          currentImg.parentElement.nextElementSibling.querySelector("img");
-        const images = document.querySelectorAll("#image-gallery img");
-
-        if (nextImg) {
-          image.src = nextImg.src;
-          image.style.display = "block";
-        } else {
-          image.src = images[0].src;
-          image.style.display = "block";
-        }
-
-        event.stopPropagation();
-      });
-
-      // When previous button is clicked
-      prevButton.addEventListener("click", (event) => {
-        image.style.display = "none";
-        const currentImgSrc = image.src;
-        const currentImg = document.querySelector(
-          `#image-gallery img[src="${currentImgSrc}"]`
-        );
-        const prevImg =
-          currentImg.parentElement.previousElementSibling.querySelector("img");
-
-        image.src = prevImg.src;
-        image.style.display = "block";
-
-        event.stopPropagation();
-      });
-
-      // When the exit button is clicked
-      exitButton.addEventListener("click", () => {
-        overlay.style.display = "none";
-      });
-    </script>
   </head>
   <body
     class="pt-16 bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-100 bg-scroll bg-no-repeat bg-cover antialiased"
@@ -372,96 +184,72 @@
           >
         </div>
       </section>
-      <section id="gallery">
-        <div class="container">
-          <div id="image-gallery">
-            <div class="row">
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                <div class="img-wrapper">
-                  <a href="https://unsplash.it/500"
-                    ><img src="https://unsplash.it/500" class="img-responsive"
-                  /></a>
-                  <div class="img-overlay">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                <div class="img-wrapper">
-                  <a href="https://unsplash.it/600"
-                    ><img src="https://unsplash.it/600" class="img-responsive"
-                  /></a>
-                  <div class="img-overlay">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                <div class="img-wrapper">
-                  <a href="https://unsplash.it/700"
-                    ><img src="https://unsplash.it/700" class="img-responsive"
-                  /></a>
-                  <div class="img-overlay">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                <div class="img-wrapper">
-                  <a href="https://unsplash.it/800"
-                    ><img src="https://unsplash.it/800" class="img-responsive"
-                  /></a>
-                  <div class="img-overlay">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                <div class="img-wrapper">
-                  <a href="https://unsplash.it/900"
-                    ><img src="https://unsplash.it/900" class="img-responsive"
-                  /></a>
-                  <div class="img-overlay">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                <div class="img-wrapper">
-                  <a href="https://unsplash.it/1000"
-                    ><img src="https://unsplash.it/1000" class="img-responsive"
-                  /></a>
-                  <div class="img-overlay">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                <div class="img-wrapper">
-                  <a href="https://unsplash.it/1100"
-                    ><img src="https://unsplash.it/1100" class="img-responsive"
-                  /></a>
-                  <div class="img-overlay">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-                <div class="img-wrapper">
-                  <a href="https://unsplash.it/1200"
-                    ><img src="https://unsplash.it/1200" class="img-responsive"
-                  /></a>
-                  <div class="img-overlay">
-                    <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                  </div>
-                </div>
+      <section>
+        <div class="container mx-auto mt-8 p-4">
+          <div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- Image items -->
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out"
+            >
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="Image 1"
+                class="w-full h-auto"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition duration-300 ease-in-out flex justify-center items-center"
+              >
+                <button class="text-white text-lg">View</button>
               </div>
             </div>
-            <!-- End row -->
+
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out"
+            >
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="Image 2"
+                class="w-full h-auto"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition duration-300 ease-in-out flex justify-center items-center"
+              >
+                <button class="text-white text-lg">View</button>
+              </div>
+            </div>
+
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out"
+            >
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="Image 3"
+                class="w-full h-auto"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition duration-300 ease-in-out flex justify-center items-center"
+              >
+                <button class="text-white text-lg">View</button>
+              </div>
+            </div>
+
+            <div
+              class="relative group overflow-hidden rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out"
+            >
+              <img
+                src="https://via.placeholder.com/400x300"
+                alt="Image 4"
+                class="w-full h-auto"
+              />
+              <div
+                class="absolute inset-0 bg-black opacity-0 group-hover:opacity-75 transition duration-300 ease-in-out flex justify-center items-center"
+              >
+                <button class="text-white text-lg">View</button>
+              </div>
+            </div>
+            <!-- Repeat this structure for more images -->
           </div>
-          <!-- End image gallery -->
         </div>
-        <!-- End container -->
       </section>
     </main>
 
