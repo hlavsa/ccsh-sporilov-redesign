@@ -307,16 +307,16 @@
             </button>
           </div>
           <div class="h-full">
-            <a
-              href="#"
-              class="h-full flex items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
+            <button
+              class="modal-trigger h-full flex w-full justify-center items-center max-w-sm p-6 bg-[#fbf6f1] border border-gray-200 rounded-lg shadow hover:bg-gray-100 hover:underline"
+              data-modal-id="modal-3"
             >
               <h3
                 class="font-['IBM_Plex_Serif'] text-2xl font-bold tracking-tight text-orange-950"
               >
                 Svátost zpovědní
               </h3>
-            </a>
+            </button>
           </div>
         </div>
         <!-- Modals -->
@@ -404,12 +404,375 @@
         </div>
 
         <div id="modal-2" class="modal">
-          <div class="modal-content">
-            <img src="your-image-url-2.jpg" alt="Modal Image 2" />
-            <p>Your modal text for Svátost manželství goes here.</p>
-            <button class="modal-close">Close</button>
+          <div class="modal-content w-4/5 mx-auto max-h-[90%] overflow-auto">
+            <figure class="">
+              <div class="w-full max-h-48 overflow-hidden">
+                <img
+                  class="mx-auto w-auto"
+                  style="
+                    object-fit: contain;
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 50px;
+                  "
+                  alt="Dvě ruce znázorněny se snubními prstýnky."
+                  src="./images/marriage-compressed.jpg"
+                />
+              </div>
+              <figcaption
+                class="font-['IBM_Plex_Serif'] ml-4 text-gray-600 text-m"
+              >
+                Zdroj fotografie:
+                <a
+                  class="font-['IBM_Plex_Serif'] text-gray-600 font-bold underline"
+                  rel="noopener"
+                  target="_blank"
+                  href="https://unsplash.com/photos/N1CZNuM_Fd8"
+                >
+                  Samantha Gades / Unsplash
+                </a>
+              </figcaption>
+            </figure>
+            <div class="pt-8 w-full md:w-2/3 text-left mx-auto">
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Manželství je důležité spojení dvou životů. Nejde pouze o právní
+                smlouvu, podobnou úřední svatbě. Ve sboru přijímají a dostávají
+                svátost manželství ti, kteří chtějí, aby Bůh jejich sňatku
+                požehnal a řídil ho. Proto může o svátost manželství žádat ten
+                pár, kde aspoň jeden je pokřtěný a věřící.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                Svatba v kostele není pouhým formálním právním aktem, ale
+                znamená něco mnohem víc. Je svátostí a skrze ni manželství Bůh
+                vstupuje mezi milující pár, aby ho posvětil a pomáhal jim v
+                letech společného života. Manželství chtěl, naplánoval a dal k
+                němu podnět sám Bůh. Pokud tedy člověk chce manželství, co
+                nejlépe pochopit a prožít, musí se s tímto Božím projektem
+                společného života dobře seznámit.
+              </p>
+              <h4
+                class="font-['IBM_Plex_Serif'] text-2xl font-bold tracking-tight text-orange-950"
+              >
+                Měli jste jen civilní sňatek?
+              </h4>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                Někdy se stává, že teprve po létech soužití některý z partnerů
+                zatouží po posvěcení manželství před Bohem a po Božím požehnání.
+                Stvrdit svůj manželský slib (učiněný před léty na úřadě) před
+                Bohem, je možné klidně i bez velkých ceremonií a neveřejně.
+                Informujte se u duchovního.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Příprava svatebního obřadu stejně tak jak je tomu u svátosti
+                křtu vyžaduje určité období zrání a duchovní rozpravy. Příprav
+                aby muž i žena dokázali dokonale a duchovně prožít odevzdán a
+                zaslíbení jeden druhému jako životní dar od Boha, který ve své
+                přítomnosti skrze Ducha svatého stvrzuje společný život
+                snoubenců (nikoli dva, ale jeden) a přináší též dar tajemství
+                nového života.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                Svátost může probíhat, jak ve sboru, tak i pod širým nebem.
+              </p>
+            </div>
+
+            <button
+              class="sticky bottom-0 mt-12 font-['IBM_Plex_Serif'] font-bold modal-close bg-[#b23118] text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-xl px-16 py-4 mb-2"
+            >
+              Zavřít
+            </button>
           </div>
         </div>
+
+        <div id="modal-3" class="modal">
+          <div class="modal-content w-4/5 mx-auto max-h-[90%] overflow-auto">
+            <figure class="">
+              <div class="w-full max-h-48 overflow-hidden">
+                <img
+                  class="mx-auto w-auto"
+                  style="
+                    object-fit: contain;
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 50px;
+                  "
+                  alt="Vyčpělá fotografie lavic v kostele."
+                  src="./images/zpoved.jpg"
+                />
+              </div>
+              <figcaption
+                class="font-['IBM_Plex_Serif'] ml-4 text-gray-600 text-m"
+              >
+                Zdroj fotografie:
+                <a
+                  class="font-['IBM_Plex_Serif'] text-gray-600 font-bold underline"
+                  rel="noopener"
+                  target="_blank"
+                  href="http://www.sporilov.info/"
+                >
+                  hsmplus / confession-i-dont-go-to-church
+                </a>
+              </figcaption>
+            </figure>
+            <div class="pt-8 w-full md:w-2/3 text-left mx-auto">
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Zpověd, usmíření je vázáno pouze na kněze. Po osobním soukromém
+                setkání mezi knězem a kajícníkem dochází k společnému vyznání
+                vin společně s posilou biblických textů, žádostí o Boží
+                odpuštění skrze Hospodinovo milosrdenství, společnou modlitbou,
+                rozhřešením a požehnání.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                Při této svátosti je též stále platná mlčenlivost kněze
+                (zpovědní tajemství), který zpověď vede.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                V CČSH má tato forma pokání tři stupně, které praktikuje:
+              </p>
+              <ul
+                class="max-w-md space-y-1 list-disc list-inside font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-xl"
+              >
+                <li>společné vyznání vin v první části liturgie</li>
+                <li>samostatné vyznání po domluvě s duchovním</li>
+                <li>
+                  společné vyznání hříchu ve sboru (v úvodu postního období,
+                  nového liturgického roku, obnovy křestních slibů)
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="sticky bottom-0 mt-12 font-['IBM_Plex_Serif'] font-bold modal-close bg-[#b23118] text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-xl px-16 py-4 mb-2"
+            >
+              Zavřít
+            </button>
+          </div>
+        </div>
+
+        <div id="modal-4" class="modal">
+          <div class="modal-content w-4/5 mx-auto max-h-[90%] overflow-auto">
+            <figure class="">
+              <div class="w-full max-h-48 overflow-hidden">
+                <img
+                  class="mx-auto w-auto"
+                  style="
+                    object-fit: contain;
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 50px;
+                  "
+                  alt="Vyčpělá fotografie lavic v kostele."
+                  src="./images/zpoved.jpg"
+                />
+              </div>
+              <figcaption
+                class="font-['IBM_Plex_Serif'] ml-4 text-gray-600 text-m"
+              >
+                Zdroj fotografie:
+                <a
+                  class="font-['IBM_Plex_Serif'] text-gray-600 font-bold underline"
+                  rel="noopener"
+                  target="_blank"
+                  href="http://www.sporilov.info/"
+                >
+                  hsmplus / confession-i-dont-go-to-church
+                </a>
+              </figcaption>
+            </figure>
+            <div class="pt-8 w-full md:w-2/3 text-left mx-auto">
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Zpověd, usmíření je vázáno pouze na kněze. Po osobním soukromém
+                setkání mezi knězem a kajícníkem dochází k společnému vyznání
+                vin společně s posilou biblických textů, žádostí o Boží
+                odpuštění skrze Hospodinovo milosrdenství, společnou modlitbou,
+                rozhřešením a požehnání.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Při této svátosti je též stále platná mlčenlivost kněze
+                (zpovědní tajemství), který zpověď vede.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                V CČSH má tato forma pokání tři stupně, které praktikuje:
+              </p>
+              <ul
+                class="max-w-md space-y-1 list-disc list-inside font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-xl"
+              >
+                <li>společné vyznání vin v první části liturgie</li>
+                <li>samostatné vyznání po domluvě s duchovním</li>
+                <li>
+                  společné vyznání hříchu ve sboru (v úvodu postního období,
+                  nového liturgického roku, obnovy křestních slibů)
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="sticky bottom-0 mt-12 font-['IBM_Plex_Serif'] font-bold modal-close bg-[#b23118] text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-xl px-16 py-4 mb-2"
+            >
+              Zavřít
+            </button>
+          </div>
+        </div>
+
+        <div id="modal-5" class="modal">
+          <div class="modal-content w-4/5 mx-auto max-h-[90%] overflow-auto">
+            <figure class="">
+              <div class="w-full max-h-48 overflow-hidden">
+                <img
+                  class="mx-auto w-auto"
+                  style="
+                    object-fit: contain;
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 50px;
+                  "
+                  alt="Vyčpělá fotografie lavic v kostele."
+                  src="./images/zpoved.jpg"
+                />
+              </div>
+              <figcaption
+                class="font-['IBM_Plex_Serif'] ml-4 text-gray-600 text-m"
+              >
+                Zdroj fotografie:
+                <a
+                  class="font-['IBM_Plex_Serif'] text-gray-600 font-bold underline"
+                  rel="noopener"
+                  target="_blank"
+                  href="http://www.sporilov.info/"
+                >
+                  hsmplus / confession-i-dont-go-to-church
+                </a>
+              </figcaption>
+            </figure>
+            <div class="pt-8 w-full md:w-2/3 text-left mx-auto">
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Zpověd, usmíření je vázáno pouze na kněze. Po osobním soukromém
+                setkání mezi knězem a kajícníkem dochází k společnému vyznání
+                vin společně s posilou biblických textů, žádostí o Boží
+                odpuštění skrze Hospodinovo milosrdenství, společnou modlitbou,
+                rozhřešením a požehnání.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Při této svátosti je též stále platná mlčenlivost kněze
+                (zpovědní tajemství), který zpověď vede.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                V CČSH má tato forma pokání tři stupně, které praktikuje:
+              </p>
+              <ul
+                class="max-w-md space-y-1 list-disc list-inside font-['IBM_Plex_Serif'] text-orange-950 text-m md:text-xl"
+              >
+                <li>společné vyznání vin v první části liturgie</li>
+                <li>samostatné vyznání po domluvě s duchovním</li>
+                <li>
+                  společné vyznání hříchu ve sboru (v úvodu postního období,
+                  nového liturgického roku, obnovy křestních slibů)
+                </li>
+              </ul>
+            </div>
+
+            <button
+              class="sticky bottom-0 mt-12 font-['IBM_Plex_Serif'] font-bold modal-close bg-[#b23118] text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-xl px-16 py-4 mb-2"
+            >
+              Zavřít
+            </button>
+          </div>
+        </div>
+
+        <div id="modal-6" class="modal">
+          <div class="modal-content w-4/5 mx-auto max-h-[90%] overflow-auto">
+            <figure class="">
+              <div class="w-full max-h-48 overflow-hidden">
+                <img
+                  class="mx-auto w-auto"
+                  style="
+                    object-fit: contain;
+                    border-top-left-radius: 50px;
+                    border-top-right-radius: 50px;
+                  "
+                  alt="Květina fotografie."
+                  src="./images/funeral-compressed.jpg"
+                />
+              </div>
+              <figcaption
+                class="font-['IBM_Plex_Serif'] ml-4 text-gray-600 text-m"
+              >
+                Zdroj fotografie:
+                <a
+                  class="font-['IBM_Plex_Serif'] text-gray-600 font-bold underline"
+                  rel="noopener"
+                  target="_blank"
+                  href="https://unsplash.com/photos/mibn6LLm9kA"
+                >
+                  Mayron Oliveira / Unsplash
+                </a>
+              </figcaption>
+            </figure>
+            <div class="pt-8 w-full md:w-2/3 text-left mx-auto">
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Příprava obřadu CČSH považuje pohřeb za svátostinu, jejímž
+                účelem je vyprosit zemřelému duchovní pomoc, prokázat úctu jeho
+                tělu a pozůstalým dodat útěchu a naději ve vzkříšení s Kristem.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                Důstojně se s člověkem rozloučit patřilo vždy k základním krokům
+                lidskosti a kultuře každé společnosti. Mluvte o posledních
+                věcech v životě člověka s druhými. Když někdo v okolí zemře,
+                nabídněte mu tuto službu.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl"
+              >
+                Poslední, důstojnou službu lásky rádi prokážeme všem pokřtěným.
+                Pohřební obřady mohou být v kostelech, obřadních síních. Slovo,
+                zpěv a služba naše varhanice je doprovází.
+              </p>
+              <p
+                class="py-8 font-['IBM_Plex_Serif'] paragraph text-orange-950 text-m md:text-xl initial"
+              >
+                Než jdete zařizovat vše na pohřební službu, je nejprve potřeba
+                domluvit den a hodinu s duchovním. Rozloučení s popelem
+                zesnulého lze též konat i mimo neděle vždy po vzájemné dohodě.
+              </p>
+            </div>
+
+            <button
+              class="sticky bottom-0 mt-12 font-['IBM_Plex_Serif'] font-bold modal-close bg-[#b23118] text-white hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-xl px-16 py-4 mb-2"
+            >
+              Zavřít
+            </button>
+          </div>
+        </div>
+        <!-- End Modals -->
+
         <h2
           class="font-['IBM_Plex_Serif'] mt-16 mb-4 text-3xl font-bold tracking-tight leading-none text-orange-950 md:text-5xl"
         >
